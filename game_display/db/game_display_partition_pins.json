@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "VGA_RED",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_GREEN",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLUE",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS",
+					"strict" : false
+				},
+				{
+					"name" : "uart_tx_o",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "yplus",
+					"strict" : false
+				},
+				{
+					"name" : "yminus",
+					"strict" : false
+				},
+				{
+					"name" : "xplus",
+					"strict" : false
+				},
+				{
+					"name" : "xminus",
+					"strict" : false
+				},
+				{
+					"name" : "uart_rx_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

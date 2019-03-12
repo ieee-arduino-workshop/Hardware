@@ -1,0 +1,20 @@
+Fitter Status : Successful - Mon Mar 04 18:00:31 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : game_display
+Top-level Entity Name : game_display
+Family : Cyclone V
+Device : 5CSEBA6U23I7DK
+Timing Models : Final
+Logic utilization (in ALMs) : 124 / 41,910 ( < 1 % )
+Total registers : 184
+Total pins : 25 / 314 ( 8 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 5,662,720 ( 0 % )
+Total RAM Blocks : 0 / 553 ( 0 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

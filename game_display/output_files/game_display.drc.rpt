@@ -1,0 +1,267 @@
+Design Assistant report for game_display
+Thu Feb 21 12:24:13 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Design Assistant Summary
+  3. Design Assistant Settings
+  4. High Violations
+  5. Medium Violations
+  6. Information only Violations
+  7. Design Assistant Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Design Assistant Summary                                                ;
++-----------------------------------+-------------------------------------+
+; Design Assistant Status           ; Analyzed - Thu Feb 21 12:24:13 2019 ;
+; Revision Name                     ; game_display                        ;
+; Top-level Entity Name             ; game_display                        ;
+; Family                            ; Cyclone V                           ;
+; Total Critical Violations         ; 0                                   ;
+; Total High Violations             ; 8                                   ;
+; - Rule A108                       ; 8                                   ;
+; Total Medium Violations           ; 1                                   ;
+; - Rule R102                       ; 1                                   ;
+; Total Information only Violations ; 52                                  ;
+; - Rule T101                       ; 2                                   ;
+; - Rule T102                       ; 50                                  ;
++-----------------------------------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Design Assistant Settings                                                                                                                                                                ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
+; Option                                                                                                                                                               ; Setting      ; To ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
+; Design Assistant mode                                                                                                                                                ; Post-Fitting ;    ;
+; Threshold value for clock net not mapped to clock spines rule                                                                                                        ; 25           ;    ;
+; Minimum number of clock port feed by gated clocks                                                                                                                    ; 30           ;    ;
+; Minimum number of node fan-out                                                                                                                                       ; 30           ;    ;
+; Maximum number of nodes to report                                                                                                                                    ; 50           ;    ;
+; Rule C101: Gated clock should be implemented according to the Intel FPGA standard scheme                                                                             ; On           ;    ;
+; Rule C102: Logic cell should not be used to generate an inverted clock signal                                                                                        ; On           ;    ;
+; Rule C103: Gated clock does not feed at least a pre-defined number of clock ports to effectively save power                                                          ; On           ;    ;
+; Rule C104: Clock signal source should drive only clock input ports                                                                                                   ; On           ;    ;
+; Rule C105: Clock signal should be a global signal                                                                                                                    ; On           ;    ;
+; Rule C106: Clock signal source should not drive registers triggered by different clock edges                                                                         ; On           ;    ;
+; Rule R101: Combinational logic used as a reset signal should be synchronized                                                                                         ; On           ;    ;
+; Rule R102: External reset signals should be synchronized using two cascaded registers                                                                                ; On           ;    ;
+; Rule R103: External reset signal should be correctly synchronized                                                                                                    ; On           ;    ;
+; Rule R104: The reset signal that is generated in one clock domain and used in another clock domain should be correctly synchronized                                  ; On           ;    ;
+; Rule R105: The reset signal that is generated in one clock domain and used in another clock domain should be synchronized                                            ; On           ;    ;
+; Rule T101: Nodes with more than the specified number of fan-outs                                                                                                     ; On           ;    ;
+; Rule T102: Top nodes with the highest number of fan-outs                                                                                                             ; On           ;    ;
+; Rule A101: Design should not contain combinational loops                                                                                                             ; On           ;    ;
+; Rule A102: Register output should not drive its own control signal directly or through combinational logic                                                           ; On           ;    ;
+; Rule A103: Design should not contain delay chains                                                                                                                    ; On           ;    ;
+; Rule A104: Design should not contain ripple clock structures                                                                                                         ; On           ;    ;
+; Rule A105: Pulses should not be implemented asynchronously                                                                                                           ; On           ;    ;
+; Rule A106: Multiple pulses should not be generated in design                                                                                                         ; On           ;    ;
+; Rule A107: Design should not contain SR latches                                                                                                                      ; On           ;    ;
+; Rule A108: Design should not contain latches                                                                                                                         ; On           ;    ;
+; Rule S101: Output enable and input of the same tri-state node should not be driven by same signal source                                                             ; On           ;    ;
+; Rule S102: Synchronous port and asynchronous port of the same register should not be driven by the same signal source                                                ; On           ;    ;
+; Rule S103: More than one asynchronous port of a register should not be driven by the same signal source                                                              ; On           ;    ;
+; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                                                                ; On           ;    ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains                                                                        ; On           ;    ;
+; Rule D102: Multiple data bits that are transferred across asynchronous clock domains are synchronized, but not all bits may be aligned in the receiving clock domain ; On           ;    ;
+; Rule D103: Data bits are not correctly synchronized when transferred between asynchronous clock domains                                                              ; On           ;    ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
+
+
++---------------------------------------------------------------------------------+
+; High Violations                                                                 ;
++--------------------------------------------------------+------------------------+
+; Rule name                                              ; Name                   ;
++--------------------------------------------------------+------------------------+
+; Rule A108: Design should not contain latches - Latch 1 ;                        ;
+;  Latch 1                                               ; uart:u_uart|rx_data[1] ;
+; Rule A108: Design should not contain latches - Latch 2 ;                        ;
+;  Latch 2                                               ; uart:u_uart|rx_data[0] ;
+; Rule A108: Design should not contain latches - Latch 3 ;                        ;
+;  Latch 3                                               ; uart:u_uart|rx_data[6] ;
+; Rule A108: Design should not contain latches - Latch 4 ;                        ;
+;  Latch 4                                               ; uart:u_uart|rx_data[2] ;
+; Rule A108: Design should not contain latches - Latch 5 ;                        ;
+;  Latch 5                                               ; uart:u_uart|rx_data[7] ;
+; Rule A108: Design should not contain latches - Latch 6 ;                        ;
+;  Latch 6                                               ; uart:u_uart|rx_data[4] ;
+; Rule A108: Design should not contain latches - Latch 7 ;                        ;
+;  Latch 7                                               ; uart:u_uart|rx_data[5] ;
+; Rule A108: Design should not contain latches - Latch 8 ;                        ;
+;  Latch 8                                               ; uart:u_uart|rx_data[3] ;
++--------------------------------------------------------+------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Medium Violations                                                                                      ;
++---------------------------------------------------------------------------------------+----------------+
+; Rule name                                                                             ; Name           ;
++---------------------------------------------------------------------------------------+----------------+
+; Rule R102: External reset signals should be synchronized using two cascaded registers ; rst_n          ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[14] ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[13] ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[10] ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[9]  ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[8]  ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[7]  ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[6]  ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[4]  ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[3]  ;
+;  Reset signal destination node(s) list                                                ; clk50_cntr[2]  ;
++---------------------------------------------------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Information only Violations                                                                              ;
++------------------------------------------------------------------+-----------------------------+---------+
+; Rule name                                                        ; Name                        ; Fan-Out ;
++------------------------------------------------------------------+-----------------------------+---------+
+; Rule T101: Nodes with more than the specified number of fan-outs ; CLOCK_50~inputCLKENA0       ; 180     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; Equal0~2                    ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; CLOCK_50~inputCLKENA0       ; 180     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal0~2                    ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|Equal0~3        ; 21      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal16~3                   ; 20      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|sample_edge     ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[9]                  ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[3]                  ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[5]                  ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[4]~DUPLICATE        ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[7]                  ; 14      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[6]                  ; 14      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|tx_data_written ; 14      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal1~1                    ; 14      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[3]                  ; 12      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[0]                  ; 12      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[1]                  ; 12      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[7]~DUPLICATE        ; 11      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; player_x~0                  ; 11      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; player_y~0                  ; 11      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[8]~DUPLICATE        ; 10      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[8]~DUPLICATE        ; 10      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|always8~2       ; 10      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[10]                 ; 10      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[6]~DUPLICATE        ; 10      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[4]~DUPLICATE        ; 9       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[2]                  ; 9       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[1]                  ; 9       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|rx_on           ; 9       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[2]                  ; 9       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[9]~DUPLICATE        ; 9       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[5]                  ; 8       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|bit_cnt_tx[0]   ; 8       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|rx_data~0       ; 8       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|tx_on           ; 7       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|bit_cnt_tx[3]~1 ; 7       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|bit_cnt[0]      ; 7       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|bit_cnt[2]      ; 6       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|bit_cnt[1]      ; 6       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[9]                  ; 6       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ver_reg[2]~DUPLICATE        ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|rx_data[5]      ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|rx_data[1]      ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|rx_data[0]      ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|rx_data[7]      ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|rx_data[2]      ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|bit_cnt_tx[1]   ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|rx_data[4]      ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|rx_data[3]      ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; uart:u_uart|sample_cnt[0]   ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; hor_reg[0]~DUPLICATE        ; 5       ;
++------------------------------------------------------------------+-----------------------------+---------+
+
+
++---------------------------+
+; Design Assistant Messages ;
++---------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Design Assistant
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Feb 21 12:24:12 2019
+Info: Command: quartus_drc game_display -c game_display
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (335093): The Timing Analyzer is analyzing 8 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Info (332104): Reading SDC File: 'game_display.sdc'
+Info (332144): No user constrained base clocks found in the design
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (308055): (High) Rule A108: Design should not contain latches. Found 8 latch(es) related to this rule.
+    Critical Warning (308012): Node  "uart:u_uart|rx_data[1]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 164
+    Critical Warning (308012): Node  "uart:u_uart|rx_data[0]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 164
+    Critical Warning (308012): Node  "uart:u_uart|rx_data[6]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 164
+    Critical Warning (308012): Node  "uart:u_uart|rx_data[2]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 164
+    Critical Warning (308012): Node  "uart:u_uart|rx_data[7]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 164
+    Critical Warning (308012): Node  "uart:u_uart|rx_data[4]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 164
+    Critical Warning (308012): Node  "uart:u_uart|rx_data[5]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 164
+    Critical Warning (308012): Node  "uart:u_uart|rx_data[3]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 164
+Warning (308023): (Medium) Rule R102: External reset signals should be synchronized using two cascaded registers. Found 1 node(s) related to this rule.
+    Warning (308010): Node  "rst_n" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 26
+Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 2 node(s) with highest fan-out.
+    Info (308011): Node  "CLOCK_50~inputCLKENA0" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 23
+    Info (308011): Node  "Equal0~2" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 43
+Info (308044): (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 50 node(s) with highest fan-out.
+    Info (308011): Node  "CLOCK_50~inputCLKENA0" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 23
+    Info (308011): Node  "Equal0~2" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 43
+    Info (308011): Node  "uart:u_uart|Equal0~3" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 55
+    Info (308011): Node  "Equal16~3" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 199
+    Info (308011): Node  "uart:u_uart|sample_edge" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 31
+    Info (308011): Node  "ver_reg[9]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "ver_reg[3]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "ver_reg[5]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "ver_reg[4]~DUPLICATE" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "ver_reg[7]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "ver_reg[6]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "uart:u_uart|tx_data_written" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 38
+    Info (308011): Node  "Equal1~1" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 47
+    Info (308011): Node  "hor_reg[3]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "ver_reg[0]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "ver_reg[1]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "hor_reg[7]~DUPLICATE" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "player_x~0" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 103
+    Info (308011): Node  "player_y~0" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 104
+    Info (308011): Node  "ver_reg[8]~DUPLICATE" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "hor_reg[8]~DUPLICATE" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "uart:u_uart|always8~2"
+    Info (308011): Node  "hor_reg[10]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "hor_reg[6]~DUPLICATE" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "hor_reg[4]~DUPLICATE" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "ver_reg[2]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "hor_reg[1]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "uart:u_uart|rx_on" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 32
+    Info (308011): Node  "hor_reg[2]" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308011): Node  "hor_reg[9]~DUPLICATE" File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/game_display_new.v Line: 111
+    Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
+Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 52 information messages and 9 warning messages
+Info: Quartus Prime Design Assistant was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4755 megabytes
+    Info: Processing ended: Thu Feb 21 12:24:14 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

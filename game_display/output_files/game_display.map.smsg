@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at uart.v(142): always construct contains both blocking and non-blocking assignments File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 142
+Warning (10268): Verilog HDL information at uart.v(154): always construct contains both blocking and non-blocking assignments File: C:/Mewantha/University/IEEE Arduino Workshop/working/game_display/uart.v Line: 154
