@@ -1,0 +1,1119 @@
+TimeQuest Timing Analyzer report for uarttest
+Sat Jun 29 23:44:22 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk50'
+ 12. Slow Model Hold: 'clk50'
+ 13. Slow Model Minimum Pulse Width: 'clk50'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk50'
+ 24. Fast Model Hold: 'clk50'
+ 25. Fast Model Minimum Pulse Width: 'clk50'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; uarttest                                           ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C20F484C7                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clk50      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 202.63 MHz ; 202.63 MHz      ; clk50      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk50 ; -3.935 ; -198.906      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk50 ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk50 ; -1.631 ; -110.389              ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk50'                                                                                                                                                                    ;
++--------+------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                      ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.935 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.973      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.865 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.903      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.807 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.845      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.759 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.797      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.649 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.687      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.643 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.640 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.678      ;
+; -3.636 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.674      ;
+; -3.636 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.674      ;
+; -3.636 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; clk50        ; clk50       ; 1.000        ; 0.000      ; 4.674      ;
++--------+------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk50'                                                                                                                                                                                    ;
++-------+--------------------------------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[2]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[2]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[3]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[3]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rxfinished                   ; uarttestTLE:uart|uarttest:uart1|rxfinished                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[1]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[2]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[3]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[0]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.612 ; uarttestTLE:uart|smallMem[0]                                 ; uarttestTLE:uart|smallMem[8]                                   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.898      ;
+; 0.614 ; uarttestTLE:uart|smallMem[1]                                 ; uarttestTLE:uart|smallMem[9]                                   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.900      ;
+; 0.614 ; uarttestTLE:uart|smallMem[4]                                 ; uarttestTLE:uart|smallMem[12]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.900      ;
+; 0.614 ; uarttestTLE:uart|smallMem[13]                                ; uarttestTLE:uart|smallMem[21]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.900      ;
+; 0.615 ; uarttestTLE:uart|smallMem[19]                                ; uarttestTLE:uart|smallMem[27]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.901      ;
+; 0.628 ; uarttestTLE:uart|smallMem[27]                                ; uarttestTLE:uart|smallMem[35]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.914      ;
+; 0.629 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.915      ;
+; 0.638 ; uarttestTLE:uart|smallMem[25]                                ; uarttestTLE:uart|smallMem[33]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.924      ;
+; 0.639 ; uarttestTLE:uart|smallMem[17]                                ; uarttestTLE:uart|smallMem[25]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.925      ;
+; 0.641 ; uarttestTLE:uart|smallMem[26]                                ; uarttestTLE:uart|smallMem[34]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.927      ;
+; 0.657 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.943      ;
+; 0.760 ; uarttestTLE:uart|smallMem[24]                                ; uarttestTLE:uart|smallMem[32]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.046      ;
+; 0.767 ; uarttestTLE:uart|smallMem[11]                                ; uarttestTLE:uart|smallMem[19]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.053      ;
+; 0.769 ; uarttestTLE:uart|smallMem[21]                                ; uarttestTLE:uart|smallMem[29]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.055      ;
+; 0.772 ; uarttestTLE:uart|smallMem[14]                                ; uarttestTLE:uart|smallMem[22]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.058      ;
+; 0.778 ; uarttestTLE:uart|smallMem[30]                                ; uarttestTLE:uart|smallMem[38]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.064      ;
+; 0.789 ; uarttestTLE:uart|smallMem[6]                                 ; uarttestTLE:uart|smallMem[14]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.075      ;
+; 0.796 ; uarttestTLE:uart|smallMem[9]                                 ; uarttestTLE:uart|smallMem[17]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 1.081      ;
+; 0.807 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[0]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.093      ;
+; 0.808 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[2]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.094      ;
+; 0.813 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[1]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.099      ;
+; 0.848 ; uarttestTLE:uart|smallMem[22]                                ; uarttestTLE:uart|smallMem[30]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.134      ;
+; 0.851 ; uarttestTLE:uart|smallMem[7]                                 ; uarttestTLE:uart|smallMem[15]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 1.136      ;
+; 0.854 ; uarttestTLE:uart|smallMem[29]                                ; uarttestTLE:uart|smallMem[37]                                  ; clk50        ; clk50       ; 0.000        ; 0.001      ; 1.141      ;
+; 0.855 ; uarttestTLE:uart|smallMem[8]                                 ; uarttestTLE:uart|smallMem[16]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 1.140      ;
+; 0.855 ; uarttestTLE:uart|smallMem[18]                                ; uarttestTLE:uart|smallMem[26]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.141      ;
+; 0.856 ; uarttestTLE:uart|smallMem[12]                                ; uarttestTLE:uart|smallMem[20]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 1.141      ;
+; 0.857 ; uarttestTLE:uart|smallMem[2]                                 ; uarttestTLE:uart|smallMem[10]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 1.142      ;
+; 0.861 ; uarttestTLE:uart|smallMem[10]                                ; uarttestTLE:uart|smallMem[18]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.147      ;
+; 0.870 ; uarttestTLE:uart|smallMem[20]                                ; uarttestTLE:uart|smallMem[28]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.156      ;
+; 0.918 ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE       ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.936 ; uarttestTLE:uart|smallMem[15]                                ; uarttestTLE:uart|smallMem[23]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.222      ;
+; 0.968 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.254      ;
+; 0.970 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.FINISHEDRX_STATE ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.256      ;
+; 0.975 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.261      ;
+; 0.976 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.263      ;
+; 0.980 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.266      ;
+; 0.987 ; uarttestTLE:uart|smallMem[3]                                 ; uarttestTLE:uart|smallMem[11]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 1.272      ;
+; 0.987 ; uarttestTLE:uart|smallMem[31]                                ; uarttestTLE:uart|smallMem[39]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.273      ;
+; 0.996 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|smallMem[7]                                   ; clk50        ; clk50       ; 0.000        ; -0.008     ; 1.274      ;
+; 0.998 ; uarttestTLE:uart|smallMem[16]                                ; uarttestTLE:uart|smallMem[24]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.284      ;
+; 1.002 ; uarttestTLE:uart|smallMem[28]                                ; uarttestTLE:uart|smallMem[36]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.288      ;
+; 1.009 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[0]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.295      ;
+; 1.010 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.296      ;
+; 1.016 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.302      ;
+; 1.024 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.310      ;
+; 1.025 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.311      ;
+; 1.035 ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.321      ;
+; 1.054 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.FINISHEDRX_STATE ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.340      ;
+; 1.081 ; uarttestTLE:uart|datarxedtrig                                ; ledsreg[0]                                                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.367      ;
+; 1.081 ; uarttestTLE:uart|datarxedtrig                                ; ledsreg[2]                                                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.367      ;
+; 1.081 ; uarttestTLE:uart|datarxedtrig                                ; ledsreg[6]                                                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.367      ;
+; 1.081 ; uarttestTLE:uart|datarxedtrig                                ; ledsreg[7]                                                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.367      ;
+; 1.094 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[3]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.380      ;
+; 1.111 ; uarttestTLE:uart|smallMem[5]                                 ; uarttestTLE:uart|smallMem[13]                                  ; clk50        ; clk50       ; 0.000        ; -0.002     ; 1.395      ;
+; 1.129 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE       ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.415      ;
+; 1.160 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|smallMem[2]                                   ; clk50        ; clk50       ; 0.000        ; -0.008     ; 1.438      ;
+; 1.172 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]                 ; clk50        ; clk50       ; 0.000        ; 0.001      ; 1.459      ;
+; 1.179 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|smallMem[5]                                   ; clk50        ; clk50       ; 0.000        ; -0.008     ; 1.457      ;
+; 1.183 ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; uarttestTLE:uart|smallMem[0]                                   ; clk50        ; clk50       ; 0.000        ; -0.008     ; 1.461      ;
+; 1.183 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|smallMem[1]                                   ; clk50        ; clk50       ; 0.000        ; -0.008     ; 1.461      ;
+; 1.188 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|smallMem[3]                                   ; clk50        ; clk50       ; 0.000        ; -0.008     ; 1.466      ;
+; 1.188 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[2]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.474      ;
+; 1.189 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|smallMem[6]                                   ; clk50        ; clk50       ; 0.000        ; -0.009     ; 1.466      ;
+; 1.192 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE ; uarttestTLE:uart|uarttest:uart1|rxfinished                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.478      ;
+; 1.206 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[0]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.492      ;
+; 1.208 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[2]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.494      ;
+; 1.247 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.FINISHEDRX_STATE ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.533      ;
+; 1.262 ; uarttestTLE:uart|smallMem[23]                                ; uarttestTLE:uart|smallMem[31]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.548      ;
+; 1.274 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.560      ;
+; 1.280 ; uarttestTLE:uart|uarttest:uart1|Rx_Data_Reg                  ; uarttestTLE:uart|uarttest:uart1|Rx_Data                        ; clk50        ; clk50       ; 0.000        ; 0.008      ; 1.574      ;
+; 1.280 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|datarxedtrig                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.566      ;
+; 1.280 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 1.566      ;
++-------+--------------------------------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk50'                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk50 ; Rise       ; clk50                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[0]                         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[0]                         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[1]                         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[1]                         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[2]                         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[2]                         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[3]                         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[3]                         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[4]                         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[4]                         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[5]                         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[5]                         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[6]                         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[6]                         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[7]                         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[7]                         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|datarxedtrig      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|datarxedtrig      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[10]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[10]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[11]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[11]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[12]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[12]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[13]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[13]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[14]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[14]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[15]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[15]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[16]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[16]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[17]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[17]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[18]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[18]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[19]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[19]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[20]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[20]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[21]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[21]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[22]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[22]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[23]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[23]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[24]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[24]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[25]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[25]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[26]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[26]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[27]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[27]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[28]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[28]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[29]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[29]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[30]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[30]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[31]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[31]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[32]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[32]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[33]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[33]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[34]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[34]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[35]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[35]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[36]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[36]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[37]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[37]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[38]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[38]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[39]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[39]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[3]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[3]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[4]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[4]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[5]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[5]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[6]       ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rst_n     ; clk50      ; 1.780 ; 1.780 ; Rise       ; clk50           ;
+; rx_in     ; clk50      ; 4.758 ; 4.758 ; Rise       ; clk50           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst_n     ; clk50      ; -0.926 ; -0.926 ; Rise       ; clk50           ;
+; rx_in     ; clk50      ; -4.510 ; -4.510 ; Rise       ; clk50           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDS[*]   ; clk50      ; 7.410 ; 7.410 ; Rise       ; clk50           ;
+;  LEDS[0]  ; clk50      ; 6.556 ; 6.556 ; Rise       ; clk50           ;
+;  LEDS[1]  ; clk50      ; 7.004 ; 7.004 ; Rise       ; clk50           ;
+;  LEDS[2]  ; clk50      ; 6.514 ; 6.514 ; Rise       ; clk50           ;
+;  LEDS[3]  ; clk50      ; 7.379 ; 7.379 ; Rise       ; clk50           ;
+;  LEDS[4]  ; clk50      ; 7.378 ; 7.378 ; Rise       ; clk50           ;
+;  LEDS[5]  ; clk50      ; 7.410 ; 7.410 ; Rise       ; clk50           ;
+;  LEDS[6]  ; clk50      ; 6.913 ; 6.913 ; Rise       ; clk50           ;
+;  LEDS[7]  ; clk50      ; 6.919 ; 6.919 ; Rise       ; clk50           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDS[*]   ; clk50      ; 6.514 ; 6.514 ; Rise       ; clk50           ;
+;  LEDS[0]  ; clk50      ; 6.556 ; 6.556 ; Rise       ; clk50           ;
+;  LEDS[1]  ; clk50      ; 7.004 ; 7.004 ; Rise       ; clk50           ;
+;  LEDS[2]  ; clk50      ; 6.514 ; 6.514 ; Rise       ; clk50           ;
+;  LEDS[3]  ; clk50      ; 7.379 ; 7.379 ; Rise       ; clk50           ;
+;  LEDS[4]  ; clk50      ; 7.378 ; 7.378 ; Rise       ; clk50           ;
+;  LEDS[5]  ; clk50      ; 7.410 ; 7.410 ; Rise       ; clk50           ;
+;  LEDS[6]  ; clk50      ; 6.913 ; 6.913 ; Rise       ; clk50           ;
+;  LEDS[7]  ; clk50      ; 6.919 ; 6.919 ; Rise       ; clk50           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk50 ; -0.922 ; -29.514       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk50 ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk50 ; -1.380 ; -90.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk50'                                                                                                                                                      ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                      ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.922 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.954      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.883 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.915      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.872 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.904      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.847 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.834 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.866      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.830 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.862      ;
+; -0.802 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.834      ;
+; -0.802 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.834      ;
+; -0.802 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.834      ;
+; -0.802 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15] ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]  ; clk50        ; clk50       ; 1.000        ; 0.000      ; 1.834      ;
++--------+------------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk50'                                                                                                                                                                                    ;
++-------+--------------------------------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[2]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[2]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[3]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[3]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rxfinished                   ; uarttestTLE:uart|uarttest:uart1|rxfinished                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[1]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[2]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[3]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[0]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.237 ; uarttestTLE:uart|smallMem[0]                                 ; uarttestTLE:uart|smallMem[8]                                   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.389      ;
+; 0.237 ; uarttestTLE:uart|smallMem[13]                                ; uarttestTLE:uart|smallMem[21]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.389      ;
+; 0.238 ; uarttestTLE:uart|smallMem[19]                                ; uarttestTLE:uart|smallMem[27]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.390      ;
+; 0.238 ; uarttestTLE:uart|smallMem[1]                                 ; uarttestTLE:uart|smallMem[9]                                   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.390      ;
+; 0.238 ; uarttestTLE:uart|smallMem[4]                                 ; uarttestTLE:uart|smallMem[12]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.390      ;
+; 0.243 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.395      ;
+; 0.246 ; uarttestTLE:uart|smallMem[27]                                ; uarttestTLE:uart|smallMem[35]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.398      ;
+; 0.251 ; uarttestTLE:uart|smallMem[17]                                ; uarttestTLE:uart|smallMem[25]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.403      ;
+; 0.251 ; uarttestTLE:uart|smallMem[25]                                ; uarttestTLE:uart|smallMem[33]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.403      ;
+; 0.253 ; uarttestTLE:uart|smallMem[26]                                ; uarttestTLE:uart|smallMem[34]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.405      ;
+; 0.259 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.411      ;
+; 0.311 ; uarttestTLE:uart|smallMem[6]                                 ; uarttestTLE:uart|smallMem[14]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 0.462      ;
+; 0.313 ; uarttestTLE:uart|smallMem[9]                                 ; uarttestTLE:uart|smallMem[17]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.465      ;
+; 0.319 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[0]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.471      ;
+; 0.320 ; uarttestTLE:uart|smallMem[22]                                ; uarttestTLE:uart|smallMem[30]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.472      ;
+; 0.320 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[2]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.472      ;
+; 0.321 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[1]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.473      ;
+; 0.322 ; uarttestTLE:uart|smallMem[24]                                ; uarttestTLE:uart|smallMem[32]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.474      ;
+; 0.322 ; uarttestTLE:uart|smallMem[7]                                 ; uarttestTLE:uart|smallMem[15]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.474      ;
+; 0.324 ; uarttestTLE:uart|smallMem[8]                                 ; uarttestTLE:uart|smallMem[16]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.476      ;
+; 0.324 ; uarttestTLE:uart|smallMem[12]                                ; uarttestTLE:uart|smallMem[20]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.476      ;
+; 0.325 ; uarttestTLE:uart|smallMem[2]                                 ; uarttestTLE:uart|smallMem[10]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325 ; uarttestTLE:uart|smallMem[18]                                ; uarttestTLE:uart|smallMem[26]                                  ; clk50        ; clk50       ; 0.000        ; 0.001      ; 0.478      ;
+; 0.325 ; uarttestTLE:uart|smallMem[21]                                ; uarttestTLE:uart|smallMem[29]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.477      ;
+; 0.326 ; uarttestTLE:uart|smallMem[10]                                ; uarttestTLE:uart|smallMem[18]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 0.477      ;
+; 0.326 ; uarttestTLE:uart|smallMem[29]                                ; uarttestTLE:uart|smallMem[37]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.478      ;
+; 0.329 ; uarttestTLE:uart|smallMem[11]                                ; uarttestTLE:uart|smallMem[19]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.481      ;
+; 0.330 ; uarttestTLE:uart|smallMem[14]                                ; uarttestTLE:uart|smallMem[22]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.482      ;
+; 0.333 ; uarttestTLE:uart|smallMem[20]                                ; uarttestTLE:uart|smallMem[28]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 0.484      ;
+; 0.334 ; uarttestTLE:uart|smallMem[30]                                ; uarttestTLE:uart|smallMem[38]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.486      ;
+; 0.355 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.359 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.366 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.518      ;
+; 0.369 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[0]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]                 ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.524      ;
+; 0.374 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.527      ;
+; 0.382 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.FINISHEDRX_STATE ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.534      ;
+; 0.383 ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE       ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.535      ;
+; 0.385 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.537      ;
+; 0.391 ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.543      ;
+; 0.398 ; uarttestTLE:uart|smallMem[15]                                ; uarttestTLE:uart|smallMem[23]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 0.549      ;
+; 0.399 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.FINISHEDRX_STATE ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.551      ;
+; 0.404 ; uarttestTLE:uart|smallMem[3]                                 ; uarttestTLE:uart|smallMem[11]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.556      ;
+; 0.406 ; uarttestTLE:uart|smallMem[31]                                ; uarttestTLE:uart|smallMem[39]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.558      ;
+; 0.406 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[3]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.558      ;
+; 0.410 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|smallMem[7]                                   ; clk50        ; clk50       ; 0.000        ; -0.006     ; 0.556      ;
+; 0.410 ; uarttestTLE:uart|smallMem[28]                                ; uarttestTLE:uart|smallMem[36]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.562      ;
+; 0.411 ; uarttestTLE:uart|smallMem[16]                                ; uarttestTLE:uart|smallMem[24]                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.563      ;
+; 0.415 ; uarttestTLE:uart|smallMem[5]                                 ; uarttestTLE:uart|smallMem[13]                                  ; clk50        ; clk50       ; 0.000        ; -0.001     ; 0.566      ;
+; 0.427 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE       ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.579      ;
+; 0.442 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[2]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.594      ;
+; 0.443 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[0]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.595      ;
+; 0.444 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE ; uarttestTLE:uart|uarttest:uart1|rxfinished                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.596      ;
+; 0.444 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[2]                             ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.596      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|smallMem[5]                                   ; clk50        ; clk50       ; 0.000        ; -0.006     ; 0.591      ;
+; 0.449 ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; uarttestTLE:uart|smallMem[0]                                   ; clk50        ; clk50       ; 0.000        ; -0.006     ; 0.595      ;
+; 0.449 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|smallMem[1]                                   ; clk50        ; clk50       ; 0.000        ; -0.006     ; 0.595      ;
+; 0.451 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|smallMem[6]                                   ; clk50        ; clk50       ; 0.000        ; -0.006     ; 0.597      ;
+; 0.451 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]                 ; clk50        ; clk50       ; 0.000        ; 0.001      ; 0.604      ;
+; 0.453 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|smallMem[3]                                   ; clk50        ; clk50       ; 0.000        ; -0.006     ; 0.599      ;
+; 0.456 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|smallMem[2]                                   ; clk50        ; clk50       ; 0.000        ; -0.006     ; 0.602      ;
+; 0.479 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.631      ;
+; 0.481 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.FINISHEDRX_STATE ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.633      ;
+; 0.482 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.634      ;
+; 0.484 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.636      ;
+; 0.484 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                     ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.636      ;
+; 0.485 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|datarxedtrig                                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.637      ;
+; 0.491 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE   ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.643      ;
+; 0.493 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.645      ;
+; 0.497 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.649      ;
+; 0.498 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                  ; clk50        ; clk50       ; 0.000        ; 0.000      ; 0.650      ;
++-------+--------------------------------------------------------------+----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk50'                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk50 ; Rise       ; clk50                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[0]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[0]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[1]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[1]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[2]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[2]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[3]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[3]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[4]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[4]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[5]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[5]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[6]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[6]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; ledsreg[7]                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; ledsreg[7]                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|datarxedtrig      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|datarxedtrig      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|rxbytescounter[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[10]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[10]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[11]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[11]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[12]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[12]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[13]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[13]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[14]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[14]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[15]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[15]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[16]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[16]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[17]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[17]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[18]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[18]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[19]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[19]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[20]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[20]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[21]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[21]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[22]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[22]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[23]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[23]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[24]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[24]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[25]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[25]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[26]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[26]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[27]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[27]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[28]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[28]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[29]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[29]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[30]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[30]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[31]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[31]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[32]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[32]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[33]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[33]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[34]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[34]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[35]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[35]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[36]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[36]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[37]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[37]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[38]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[38]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[39]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[39]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50 ; Rise       ; uarttestTLE:uart|smallMem[6]       ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rst_n     ; clk50      ; 0.180 ; 0.180 ; Rise       ; clk50           ;
+; rx_in     ; clk50      ; 2.181 ; 2.181 ; Rise       ; clk50           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst_n     ; clk50      ; 0.156  ; 0.156  ; Rise       ; clk50           ;
+; rx_in     ; clk50      ; -2.061 ; -2.061 ; Rise       ; clk50           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDS[*]   ; clk50      ; 3.928 ; 3.928 ; Rise       ; clk50           ;
+;  LEDS[0]  ; clk50      ; 3.602 ; 3.602 ; Rise       ; clk50           ;
+;  LEDS[1]  ; clk50      ; 3.749 ; 3.749 ; Rise       ; clk50           ;
+;  LEDS[2]  ; clk50      ; 3.577 ; 3.577 ; Rise       ; clk50           ;
+;  LEDS[3]  ; clk50      ; 3.899 ; 3.899 ; Rise       ; clk50           ;
+;  LEDS[4]  ; clk50      ; 3.904 ; 3.904 ; Rise       ; clk50           ;
+;  LEDS[5]  ; clk50      ; 3.928 ; 3.928 ; Rise       ; clk50           ;
+;  LEDS[6]  ; clk50      ; 3.747 ; 3.747 ; Rise       ; clk50           ;
+;  LEDS[7]  ; clk50      ; 3.753 ; 3.753 ; Rise       ; clk50           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDS[*]   ; clk50      ; 3.577 ; 3.577 ; Rise       ; clk50           ;
+;  LEDS[0]  ; clk50      ; 3.602 ; 3.602 ; Rise       ; clk50           ;
+;  LEDS[1]  ; clk50      ; 3.749 ; 3.749 ; Rise       ; clk50           ;
+;  LEDS[2]  ; clk50      ; 3.577 ; 3.577 ; Rise       ; clk50           ;
+;  LEDS[3]  ; clk50      ; 3.899 ; 3.899 ; Rise       ; clk50           ;
+;  LEDS[4]  ; clk50      ; 3.904 ; 3.904 ; Rise       ; clk50           ;
+;  LEDS[5]  ; clk50      ; 3.928 ; 3.928 ; Rise       ; clk50           ;
+;  LEDS[6]  ; clk50      ; 3.747 ; 3.747 ; Rise       ; clk50           ;
+;  LEDS[7]  ; clk50      ; 3.753 ; 3.753 ; Rise       ; clk50           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.935   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clk50           ; -3.935   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -198.906 ; 0.0   ; 0.0      ; 0.0     ; -110.389            ;
+;  clk50           ; -198.906 ; 0.000 ; N/A      ; N/A     ; -110.389            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rst_n     ; clk50      ; 1.780 ; 1.780 ; Rise       ; clk50           ;
+; rx_in     ; clk50      ; 4.758 ; 4.758 ; Rise       ; clk50           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst_n     ; clk50      ; 0.156  ; 0.156  ; Rise       ; clk50           ;
+; rx_in     ; clk50      ; -2.061 ; -2.061 ; Rise       ; clk50           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDS[*]   ; clk50      ; 7.410 ; 7.410 ; Rise       ; clk50           ;
+;  LEDS[0]  ; clk50      ; 6.556 ; 6.556 ; Rise       ; clk50           ;
+;  LEDS[1]  ; clk50      ; 7.004 ; 7.004 ; Rise       ; clk50           ;
+;  LEDS[2]  ; clk50      ; 6.514 ; 6.514 ; Rise       ; clk50           ;
+;  LEDS[3]  ; clk50      ; 7.379 ; 7.379 ; Rise       ; clk50           ;
+;  LEDS[4]  ; clk50      ; 7.378 ; 7.378 ; Rise       ; clk50           ;
+;  LEDS[5]  ; clk50      ; 7.410 ; 7.410 ; Rise       ; clk50           ;
+;  LEDS[6]  ; clk50      ; 6.913 ; 6.913 ; Rise       ; clk50           ;
+;  LEDS[7]  ; clk50      ; 6.919 ; 6.919 ; Rise       ; clk50           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDS[*]   ; clk50      ; 3.577 ; 3.577 ; Rise       ; clk50           ;
+;  LEDS[0]  ; clk50      ; 3.602 ; 3.602 ; Rise       ; clk50           ;
+;  LEDS[1]  ; clk50      ; 3.749 ; 3.749 ; Rise       ; clk50           ;
+;  LEDS[2]  ; clk50      ; 3.577 ; 3.577 ; Rise       ; clk50           ;
+;  LEDS[3]  ; clk50      ; 3.899 ; 3.899 ; Rise       ; clk50           ;
+;  LEDS[4]  ; clk50      ; 3.904 ; 3.904 ; Rise       ; clk50           ;
+;  LEDS[5]  ; clk50      ; 3.928 ; 3.928 ; Rise       ; clk50           ;
+;  LEDS[6]  ; clk50      ; 3.747 ; 3.747 ; Rise       ; clk50           ;
+;  LEDS[7]  ; clk50      ; 3.753 ; 3.753 ; Rise       ; clk50           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk50      ; clk50    ; 1476     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk50      ; clk50    ; 1476     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 90    ; 90   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Sat Jun 29 23:44:20 2019
+Info: Command: quartus_sta uarttest -c uarttest
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'uarttest.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk50 clk50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.935
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.935      -198.906 clk50 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631      -110.389 clk50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.922
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.922       -29.514 clk50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -90.380 clk50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4539 megabytes
+    Info: Processing ended: Sat Jun 29 23:44:22 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

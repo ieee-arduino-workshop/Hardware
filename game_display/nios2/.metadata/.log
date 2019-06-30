@@ -1,0 +1,13 @@
+!SESSION 2019-06-28 20:03:39.531 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_AU
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-06-28 20:07:01.319
+!MESSAGE Indexed 'proj_nios_bsp' (77 sources, 54 headers) in 1.54 sec: 878 declarations; 2,117 references; 113 unresolved inclusions; 5 syntax errors; 191 unresolved names (5.99%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-06-28 20:07:37.401
+!MESSAGE Indexed 'proj_nios' (1 sources, 13 headers) in 0.03 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="proj_qsys">
+		<CBX_INST_ENTRY INSTANCE_NAME="|proj_qsys|proj_qsys_jtag_uart_0:jtag_uart_0|proj_qsys_jtag_uart_0_scfifo_w:the_proj_qsys_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|proj_qsys|proj_qsys_nios2_qsys_0:nios2_qsys_0|proj_qsys_nios2_qsys_0_nios2_oci:the_proj_qsys_nios2_qsys_0_nios2_oci|proj_qsys_nios2_qsys_0_nios2_ocimem:the_proj_qsys_nios2_qsys_0_nios2_ocimem|proj_qsys_nios2_qsys_0_ociram_sp_ram_module:proj_qsys_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_ug81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|proj_qsys|proj_qsys_nios2_qsys_0:nios2_qsys_0|proj_qsys_nios2_qsys_0_register_bank_a_module:proj_qsys_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_q3h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|proj_qsys|proj_qsys_nios2_qsys_0:nios2_qsys_0|proj_qsys_nios2_qsys_0_register_bank_b_module:proj_qsys_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_r3h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|proj_qsys|proj_qsys_jtag_uart_0:jtag_uart_0|proj_qsys_jtag_uart_0_scfifo_r:the_proj_qsys_jtag_uart_0_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|proj_qsys|proj_qsys_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_o5d1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

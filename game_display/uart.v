@@ -12,17 +12,19 @@ module uart(
 );
 
   // (1 / Baud Rate )/ (CLK_50_Period)
+  
+  //parameters below specifies the 
   parameter UART_4800  = 10416;    // Option 3 multiply by 12
   parameter UART_9600  =  5208;    // Option 2 Multiply by 6
   parameter UART_19200 =  2604;    // Option 1 Multiply by 3
   parameter UART_57600 =   108;    // Option 0 Multiply by 1
   parameter UART_115200 =  54; 
   
-  reg [15:0] clk50_cntr;
+  reg [15:0] clk50_cntr; //16 bit counter value
   reg        rx_d1;
   reg        rx_d2;
   reg        rx_d3;
-  reg [15:0] sample_reg;
+  reg [15:0] sample_reg; //16 bit sample register
   reg [10:0] rx_reg;
   reg [2:0]  sample_cnt;
   reg [2:0]  sample_cnt_rx;
@@ -45,6 +47,9 @@ module uart(
   //====================================================
   // clocks and sampling edges for UART communication  
   //====================================================
+  
+  //the block below runs a counter and trigger sample_edge whenever the counter reaches number of 
+  //cycles corresponding to the baudrate
   always @(posedge clk50 or negedge rst_n)
   begin
     if(~rst_n)
@@ -52,7 +57,7 @@ module uart(
       clk50_cntr <= 16'd0;
       sample_edge <= 1'd0;
     end
-    else if (clk50_cntr == (UART_115200-1))
+    else if (clk50_cntr == (UART_9600-1))
     begin
       clk50_cntr <=  16'd0;
       sample_edge <= 1'd1;
@@ -64,6 +69,9 @@ module uart(
     end
   end
 
+  
+  
+  
   always @(posedge clk50 or negedge rst_n)
     begin
       if(~rst_n)
@@ -94,6 +102,9 @@ module uart(
       rx_d3 <= rx_d2;
     end
   end
+  
+  
+  assign test[7] = sample_edge;
   
   always @(posedge clk50 or negedge rst_n)
   begin

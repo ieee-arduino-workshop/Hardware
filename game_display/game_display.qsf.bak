@@ -37,15 +37,15 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CSEBA6U23I7DK
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C20F484C7
 set_global_assignment -name TOP_LEVEL_ENTITY game_display
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:14:07  JULY 02, 2016"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
@@ -57,6 +57,31 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 
 
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_BLUE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_GREEN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_RED
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart_baud[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart_baud[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart_baud[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart_baud[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart_rx_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart_tx_o
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xminus
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xplus
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to yminus
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to yplus
 set_global_assignment -name VERILOG_FILE game_display_new.v
 set_global_assignment -name SDC_FILE game_display.sdc
 set_global_assignment -name VERILOG_FILE uart.v

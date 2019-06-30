@@ -1,0 +1,6 @@
+	component proj_qsys is
+		port (
+			clk_clk : in std_logic := 'X'  -- clk
+		);
+	end component proj_qsys;
+

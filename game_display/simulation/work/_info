@@ -1,0 +1,44 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0
+vuarttest
+!i10b 1
+Z1 !s100 b6VEEa`=[NAI<;7jZ34Jo3
+Z2 IaXIHo7`A3AnK]G_Xojdlo0
+Z3 V>lPc>6Z3BZl1RB0IbN2GO1
+Z4 dC:\Users\Mewa\Desktop\workingrepo\game_display\simulation
+Z5 w1561808649
+Z6 8C:/Users/Mewa/Desktop/workingrepo/game_display/uarttest/uarttest.v
+Z7 FC:/Users/Mewa/Desktop/workingrepo/game_display/uarttest/uarttest.v
+L0 2
+Z8 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1561810516.811000
+!s107 C:/Users/Mewa/Desktop/workingrepo/game_display/uarttest/uarttest.v|
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Mewa/Desktop/workingrepo/game_display/uarttest/uarttest.v|
+!s101 -O0
+Z10 o-work work -O0
+vuarttestTLE
+Z11 IY`3iU_?:T;ID8hZE8:oi12
+Z12 Vz7V4V>FI`Cn^5i[jYWNo23
+R4
+Z13 w1561810362
+Z14 8C:/Users/Mewa/Desktop/workingrepo/game_display/uarttest/uarttestTLE.v
+Z15 FC:/Users/Mewa/Desktop/workingrepo/game_display/uarttest/uarttestTLE.v
+L0 1
+R8
+r1
+31
+Z16 !s90 -reportprogress|300|-work|work|C:/Users/Mewa/Desktop/workingrepo/game_display/uarttest/uarttestTLE.v|
+R10
+Z17 nuarttest@t@l@e
+!i10b 1
+Z18 !s100 mEEVbkdo2<B9C_Z4g7eb62
+!s85 0
+Z19 !s108 1561810378.485000
+Z20 !s107 C:/Users/Mewa/Desktop/workingrepo/game_display/uarttest/uarttestTLE.v|
+!s101 -O0
