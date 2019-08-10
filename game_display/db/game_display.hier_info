@@ -14,6 +14,7 @@ LED[5] <= ledsreg[5].DB_MAX_OUTPUT_PORT_TYPE
 LED[6] <= ledsreg[6].DB_MAX_OUTPUT_PORT_TYPE
 LED[7] <= ledsreg[7].DB_MAX_OUTPUT_PORT_TYPE
 uart_rx_i => uart_rx_i.IN1
+uart_rx_dump <= uart_rx_i.DB_MAX_OUTPUT_PORT_TYPE
 uart_tx_o <= <GND>
 rst_n => rst_n.IN1
 

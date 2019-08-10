@@ -12,6 +12,7 @@ module game_display
         LED,
         //uart_baud,
         uart_rx_i,
+		  uart_rx_dump,
         uart_tx_o,
         rst_n/*,
         xplus,
@@ -24,6 +25,7 @@ module game_display
     //input [3:0] uart_baud;
     input uart_rx_i;
     input rst_n;
+	 output uart_rx_dump;
 //    input xplus;
 //    input xminus;
 //    input yplus;
@@ -138,6 +140,7 @@ module game_display
 	assign x_pos [15:0] = dataconn[31:16];
 	assign y_pos [15:0] = dataconn[15:0];
 
+	assign uart_rx_dump = uart_rx_i;
 
 uarttestTLE uart(
          .clk50(CLOCK_50),
