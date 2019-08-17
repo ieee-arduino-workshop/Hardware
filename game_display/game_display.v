@@ -62,7 +62,7 @@ module game_display
    localparam ARN_WIDTH  = 60 * _1_YARD;    // Total width is 60 yards
    localparam ARN_CX     = SCR_CX;          // X coord centre of Arena
    localparam ARN_CY     = SCR_CY;          // Y coord centre of Arena
-   localparam ARN_C2KZL  = 25 * _1_YARD;    // Arena centre to Keeper Zone line
+   localparam ARN_C2KZL  = 30 * _1_YARD;    // Arena centre to Keeper Zone line
 	localparam ARN_GOALBNDRY_LEN = 10 * _1_YARD;  //goal boundry length (x axis)
 	localparam ARN_GOALBNDRY_HEIGHT = 30 * _1_YARD; //goal boundry height (y axis)
 	localparam ARN_GOAL_LEN			  = 1 * _1_YARD; //goal length (x axis)
