@@ -239,17 +239,17 @@ uarttestTLE uart(
     
     assign VGA_RED =    disp_arn_bndry_top | disp_arn_bndry_bot | disp_arn_bndry_lhs1 | disp_arn_bndry_lhs2 | disp_arn_bndry_rhs1 | disp_arn_bndry_rhs2 
                        | disp_arn_kz_lhs | disp_arn_kz_rhs|disp_arn_midline|disp_arn_goalbndry_lhs|disp_arn_goalbndry_rhs|disp_arn_goalbndry_lhs_top
-							  |disp_arn_goalbndry_lhs_bot|disp_arn_goalbndry_rhs_top|disp_arn_goalbndry_rhs_bot |disp_player[5]|disp_player[6]|disp_player[7]|disp_player[8]|disp_player[9]|disp_ball;
+							  |disp_arn_goalbndry_lhs_bot|disp_arn_goalbndry_rhs_top|disp_arn_goalbndry_rhs_bot |disp_player[1]|disp_player[3]|disp_player[5]|disp_player[7]|disp_player[9]|disp_ball;
 							  
 							  
     assign VGA_GREEN =  disp_arn_bndry_top | disp_arn_bndry_bot | disp_arn_bndry_lhs1 | disp_arn_bndry_lhs2 | disp_arn_bndry_rhs1 | disp_arn_bndry_rhs2
                        | disp_arn_kz_lhs | disp_arn_kz_rhs | disp_arn_midline|disp_arn_goalbndry_lhs|disp_arn_goalbndry_rhs|disp_arn_goalbndry_lhs_top
-							  |disp_arn_goalbndry_lhs_bot|disp_arn_goalbndry_rhs_top|disp_arn_goalbndry_rhs_bot |disp_arn_goal_lhs |disp_arn_goal_rhs |disp_player[0]|disp_player[1]|disp_player[2]|disp_player[3]|disp_player[4]|disp_ball ;
+							  |disp_arn_goalbndry_lhs_bot|disp_arn_goalbndry_rhs_top|disp_arn_goalbndry_rhs_bot |disp_arn_goal_lhs |disp_arn_goal_rhs |disp_player[0]|disp_player[2]|disp_player[4]|disp_player[6]|disp_player[8]|disp_ball ;
 							  
 							  
     assign VGA_BLUE =   disp_arn_bndry_top | disp_arn_bndry_bot | disp_arn_bndry_lhs1 | disp_arn_bndry_lhs2 | disp_arn_bndry_rhs1 | disp_arn_bndry_rhs2
                        | disp_arn_kz_lhs | disp_arn_kz_rhs |disp_arn_midline|disp_arn_goalbndry_lhs|disp_arn_goalbndry_rhs|disp_arn_goalbndry_lhs_top
-							  |disp_arn_goalbndry_lhs_bot|disp_arn_goalbndry_rhs_top|disp_arn_goalbndry_rhs_bot|disp_arn_goal_lhs |disp_arn_goal_rhs |disp_player[5]|disp_player[6]|disp_player[7]|disp_player[8]|disp_player[9]|disp_ball;
+							  |disp_arn_goalbndry_lhs_bot|disp_arn_goalbndry_rhs_top|disp_arn_goalbndry_rhs_bot|disp_arn_goal_lhs |disp_arn_goal_rhs |disp_player[1]|disp_player[3]|disp_player[5]|disp_player[7]|disp_player[9]|disp_ball;
     
   // ARENA display ends ------------------
   //

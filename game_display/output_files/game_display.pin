@@ -80,9 +80,9 @@ GND*                         : A9        :        :                   :         
 GND*                         : A10       :        :                   :         : 3         :                
 VGA_HS                       : A11       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND+                         : A12       :        :                   :         : 4         :                
-GND*                         : A13       :        :                   :         : 4         :                
+uart_rx_i                    : A13       : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND*                         : A14       :        :                   :         : 4         :                
-uart_rx_i                    : A15       : input  : 3.3-V LVTTL       :         : 4         : Y              
+GND*                         : A15       :        :                   :         : 4         :                
 GND*                         : A16       :        :                   :         : 4         :                
 GND*                         : A17       :        :                   :         : 4         :                
 GND*                         : A18       :        :                   :         : 4         :                
