@@ -113,6 +113,15 @@ module game_display
 	reg disp_arn_goal_rhs_top;
 	reg disp_arn_goal_rhs_bot;
 	
+	reg flash_boarders;
+	
+	reg [25:0] count_value;
+	reg [2:0] flash_count;
+ 
+	//2Hz symmetric square wave by default
+	parameter fullNCycles = 26'd5000000;
+	parameter halfNCycles = 26'd2500000;
+	
 	
    reg disp_player[9:0]; //display of 10 players
 	reg disp_ball;
@@ -245,13 +254,13 @@ uarttestTLE uart(
 							  |disp_arn_goalbndry_lhs_bot|disp_arn_goalbndry_rhs_top|disp_arn_goalbndry_rhs_bot |disp_player[1]|disp_player[3]|disp_player[5]|disp_player[7]|disp_player[9]|disp_ball;
 							  
 							  
-    assign VGA_GREEN =  disp_arn_bndry_top | disp_arn_bndry_bot | disp_arn_bndry_lhs1 | disp_arn_bndry_lhs2 | disp_arn_bndry_rhs1 | disp_arn_bndry_rhs2
-                       | disp_arn_kz_lhs | disp_arn_kz_rhs | disp_arn_midline|disp_arn_goalbndry_lhs|disp_arn_goalbndry_rhs|disp_arn_goalbndry_lhs_top
+    assign VGA_GREEN =  (disp_arn_bndry_top&~flash_boarders) | (disp_arn_bndry_bot&~flash_boarders) | disp_arn_bndry_lhs1 | disp_arn_bndry_lhs2 | disp_arn_bndry_rhs1 | disp_arn_bndry_rhs2
+                       | (disp_arn_kz_lhs&~flash_boarders) | (disp_arn_kz_rhs&~flash_boarders) | disp_arn_midline|disp_arn_goalbndry_lhs|disp_arn_goalbndry_rhs|disp_arn_goalbndry_lhs_top
 							  |disp_arn_goalbndry_lhs_bot|disp_arn_goalbndry_rhs_top|disp_arn_goalbndry_rhs_bot |disp_arn_goal_lhs |disp_arn_goal_rhs |disp_player[0]|disp_player[2]|disp_player[4]|disp_player[6]|disp_player[8]|disp_ball ;
 							  
 							  
-    assign VGA_BLUE =   disp_arn_bndry_top | disp_arn_bndry_bot | disp_arn_bndry_lhs1 | disp_arn_bndry_lhs2 | disp_arn_bndry_rhs1 | disp_arn_bndry_rhs2
-                       | disp_arn_kz_lhs | disp_arn_kz_rhs |disp_arn_midline|disp_arn_goalbndry_lhs|disp_arn_goalbndry_rhs|disp_arn_goalbndry_lhs_top
+    assign VGA_BLUE =   (disp_arn_bndry_top&~flash_boarders) | (disp_arn_bndry_bot&~flash_boarders) | disp_arn_bndry_lhs1 | disp_arn_bndry_lhs2 | disp_arn_bndry_rhs1 | disp_arn_bndry_rhs2
+                       | (disp_arn_kz_lhs&~flash_boarders) | (disp_arn_kz_rhs&~flash_boarders) |disp_arn_midline|disp_arn_goalbndry_lhs|disp_arn_goalbndry_rhs|disp_arn_goalbndry_lhs_top
 							  |disp_arn_goalbndry_lhs_bot|disp_arn_goalbndry_rhs_top|disp_arn_goalbndry_rhs_bot|disp_arn_goal_lhs |disp_arn_goal_rhs |disp_player[1]|disp_player[3]|disp_player[5]|disp_player[7]|disp_player[9]|disp_ball;
     
   // ARENA display ends ------------------
@@ -857,6 +866,58 @@ end
   
   
  //--players and ball display ends
+ 
+ 
+always @ (posedge CLOCK_50 or negedge rst_n)
+begin
+	if(~rst_n)
+	begin
+		flash_boarders<=0;
+		flash_count<=0;
+		count_value<=0;
+	end
+	else if (CLOCK_50==1'b1)
+	begin
+		if(flash_count<6)
+		begin
+			if(count_value == (fullNCycles-1'b1))
+				begin
+					count_value <=0;
+					flash_count<= flash_count+1'b1;
+					flash_boarders<=1'b0;
+				end
+			 else
+				begin
+					count_value <= count_value+1'b1;
+					
+					if(count_value < halfNCycles)
+						begin
+							flash_boarders<=1'b1;
+						end
+					else
+						begin
+							flash_boarders<=1'b0;
+						end	
+				end
+		
+		end
+		else
+		begin
+				if(dataReceived == 1) //the ball is addresses
+				begin
+					if(elementID==8'hFB)
+					begin
+						flash_boarders<=0;
+						flash_count<=0;
+						count_value<=0;
+					end
+				end
+		end
+
+
+	end
+
+end
  
  
 // always @ (posedge CLOCK_50 or negedge rst_n)

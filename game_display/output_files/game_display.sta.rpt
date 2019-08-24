@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for game_display
-Sat Aug 24 12:08:34 2019
+Sat Aug 24 13:38:25 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -104,7 +104,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------+--------+--------------------------+
 ; SDC File Path    ; Status ; Read at                  ;
 +------------------+--------+--------------------------+
-; game_display.sdc ; OK     ; Sat Aug 24 12:08:33 2019 ;
+; game_display.sdc ; OK     ; Sat Aug 24 13:38:24 2019 ;
 +------------------+--------+--------------------------+
 
 
@@ -122,7 +122,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 130.55 MHz ; 130.55 MHz      ; CLOCK_50   ;      ;
+; 129.25 MHz ; 129.25 MHz      ; CLOCK_50   ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -132,7 +132,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+---------------+
 ; Clock    ; Slack  ; End Point TNS ;
 +----------+--------+---------------+
-; CLOCK_50 ; -6.660 ; -11488.813    ;
+; CLOCK_50 ; -6.737 ; -11590.827    ;
 +----------+--------+---------------+
 
 
@@ -162,7 +162,7 @@ No paths to report.
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; CLOCK_50 ; -1.631 ; -2687.587          ;
+; CLOCK_50 ; -1.631 ; -2724.247          ;
 +----------+--------+--------------------+
 
 
@@ -171,106 +171,106 @@ No paths to report.
 +--------+-------------------------------+--------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                     ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; -6.660 ; hor_reg[2]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 7.701      ;
-; -6.596 ; hor_reg[5]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 7.637      ;
-; -6.555 ; hor_reg[5]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 7.580      ;
-; -6.545 ; hor_reg[9]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 7.570      ;
-; -6.509 ; ver_reg[6]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.016      ; 7.563      ;
-; -6.484 ; ver_reg[4]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.016      ; 7.538      ;
-; -6.413 ; hor_reg[6]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 7.454      ;
-; -6.412 ; hor_reg[4]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.444      ;
-; -6.369 ; hor_reg[4]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 7.404      ;
-; -6.359 ; ver_reg[2]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.397      ;
-; -6.356 ; ver_reg[1]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.014      ; 7.408      ;
-; -6.351 ; ver_reg[1]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.385      ;
-; -6.339 ; hor_reg[3]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.371      ;
-; -6.328 ; hor_reg[7]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.367      ;
-; -6.325 ; ver_reg[4]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 7.372      ;
-; -6.320 ; hor_reg[4]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.359      ;
-; -6.319 ; hor_reg[3]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 7.360      ;
-; -6.317 ; hor_reg[7]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.349      ;
-; -6.316 ; hor_reg[0]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 7.357      ;
-; -6.313 ; hor_reg[3]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 7.338      ;
-; -6.312 ; hor_reg[5]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.344      ;
-; -6.311 ; hor_reg[9]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 7.346      ;
-; -6.305 ; ver_reg[6]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.339      ;
-; -6.296 ; ver_reg[8]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.330      ;
-; -6.291 ; hor_reg[10]                   ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.323      ;
-; -6.285 ; ver_reg[7]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.010      ; 7.333      ;
-; -6.280 ; hor_reg[8]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.312      ;
-; -6.276 ; hor_reg[2]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.315      ;
-; -6.274 ; hor_reg[4]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 7.295      ;
-; -6.273 ; ver_reg[3]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.012      ; 7.323      ;
-; -6.272 ; ver_reg[5]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.016      ; 7.326      ;
-; -6.269 ; ver_reg[3]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.014      ; 7.321      ;
-; -6.267 ; ver_reg[8]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.007      ; 7.312      ;
-; -6.267 ; hor_reg[5]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.306      ;
-; -6.265 ; hor_reg[3]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.304      ;
-; -6.263 ; ver_reg[3]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.297      ;
-; -6.259 ; ver_reg[8]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.016      ; 7.313      ;
-; -6.259 ; ver_reg[3]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 7.306      ;
-; -6.254 ; hor_reg[5]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.288      ;
-; -6.250 ; hor_reg[5]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 7.287      ;
-; -6.244 ; ver_reg[2]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.012      ; 7.294      ;
-; -6.243 ; ver_reg[0]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.277      ;
-; -6.241 ; ver_reg[4]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.014      ; 7.293      ;
-; -6.239 ; hor_reg[9]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.278      ;
-; -6.237 ; hor_reg[6]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 7.262      ;
-; -6.237 ; ver_reg[5]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.014      ; 7.289      ;
-; -6.234 ; ver_reg[6]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 7.281      ;
-; -6.234 ; hor_reg[6]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.273      ;
-; -6.234 ; ver_reg[2]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.009      ; 7.281      ;
-; -6.233 ; ver_reg[1]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.016      ; 7.287      ;
-; -6.228 ; hor_reg[6]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.260      ;
-; -6.225 ; hor_reg[8]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 7.250      ;
-; -6.222 ; ver_reg[0]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.014      ; 7.274      ;
-; -6.221 ; hor_reg[5]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.260      ;
-; -6.219 ; hor_reg[10]                   ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 7.260      ;
-; -6.217 ; ver_reg[1]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.007      ; 7.262      ;
-; -6.217 ; hor_reg[9]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.251      ;
-; -6.215 ; hor_reg[6]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 7.250      ;
-; -6.212 ; hor_reg[4]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 7.253      ;
-; -6.212 ; hor_reg[1]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 7.247      ;
-; -6.205 ; hor_reg[2]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.237      ;
-; -6.205 ; hor_reg[4]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.244      ;
-; -6.204 ; uarttestTLE:uart|smallMem[32] ; player_x[8][15][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.231      ;
-; -6.204 ; uarttestTLE:uart|smallMem[32] ; player_x[8][15][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.231      ;
-; -6.197 ; hor_reg[2]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 7.222      ;
-; -6.197 ; ver_reg[3]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.007      ; 7.242      ;
-; -6.194 ; hor_reg[0]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 7.219      ;
-; -6.186 ; ver_reg[0]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.016      ; 7.240      ;
-; -6.182 ; hor_reg[10]                   ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.216      ;
-; -6.181 ; ver_reg[9]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.007      ; 7.226      ;
-; -6.181 ; hor_reg[2]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.220      ;
-; -6.181 ; hor_reg[0]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 7.218      ;
-; -6.179 ; hor_reg[4]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 7.204      ;
-; -6.175 ; ver_reg[7]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.016      ; 7.229      ;
-; -6.173 ; ver_reg[4]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.211      ;
-; -6.172 ; ver_reg[0]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.210      ;
-; -6.169 ; uarttestTLE:uart|smallMem[33] ; player_x[8][15][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.196      ;
-; -6.169 ; uarttestTLE:uart|smallMem[33] ; player_x[8][15][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.196      ;
-; -6.169 ; ver_reg[6]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.207      ;
-; -6.167 ; ver_reg[7]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.205      ;
-; -6.164 ; hor_reg[0]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 7.199      ;
-; -6.161 ; hor_reg[1]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.195      ;
-; -6.154 ; ver_reg[2]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.188      ;
-; -6.148 ; ver_reg[2]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.014      ; 7.200      ;
-; -6.144 ; hor_reg[7]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.183      ;
-; -6.143 ; ver_reg[1]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.012      ; 7.193      ;
-; -6.142 ; hor_reg[3]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 7.177      ;
-; -6.141 ; hor_reg[8]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 7.162      ;
-; -6.134 ; ver_reg[4]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.014      ; 7.186      ;
-; -6.134 ; hor_reg[4]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 7.171      ;
-; -6.133 ; ver_reg[6]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.014      ; 7.185      ;
-; -6.132 ; hor_reg[3]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.171      ;
-; -6.131 ; ver_reg[6]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.010      ; 7.179      ;
-; -6.130 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 7.149      ;
-; -6.130 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 7.149      ;
-; -6.130 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 7.149      ;
-; -6.130 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 7.149      ;
-; -6.130 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 7.149      ;
-; -6.130 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 7.149      ;
-; -6.128 ; hor_reg[1]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.160      ;
+; -6.737 ; hor_reg[7]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 7.779      ;
+; -6.569 ; hor_reg[0]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.599      ;
+; -6.555 ; hor_reg[8]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.594      ;
+; -6.550 ; hor_reg[8]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.580      ;
+; -6.544 ; hor_reg[1]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.583      ;
+; -6.532 ; hor_reg[5]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.562      ;
+; -6.517 ; ver_reg[9]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.551      ;
+; -6.486 ; hor_reg[5]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 7.528      ;
+; -6.456 ; hor_reg[6]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.495      ;
+; -6.450 ; ver_reg[5]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.484      ;
+; -6.449 ; hor_reg[4]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.487      ;
+; -6.425 ; hor_reg[10]                   ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.464      ;
+; -6.403 ; ver_reg[4]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 7.436      ;
+; -6.388 ; hor_reg[1]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 7.430      ;
+; -6.385 ; hor_reg[9]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.421      ;
+; -6.385 ; ver_reg[0]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.419      ;
+; -6.384 ; hor_reg[3]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.423      ;
+; -6.381 ; hor_reg[2]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.420      ;
+; -6.377 ; hor_reg[2]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 7.419      ;
+; -6.376 ; hor_reg[3]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.406      ;
+; -6.370 ; ver_reg[0]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 7.386      ;
+; -6.366 ; hor_reg[1]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.396      ;
+; -6.354 ; hor_reg[3]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 7.396      ;
+; -6.349 ; ver_reg[5]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.383      ;
+; -6.344 ; ver_reg[3]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.374      ;
+; -6.337 ; ver_reg[8]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.371      ;
+; -6.336 ; hor_reg[8]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.372      ;
+; -6.332 ; hor_reg[4]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.362      ;
+; -6.328 ; hor_reg[8]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 7.349      ;
+; -6.323 ; hor_reg[6]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 7.365      ;
+; -6.322 ; hor_reg[4]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.358      ;
+; -6.309 ; ver_reg[8]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.345      ;
+; -6.307 ; ver_reg[5]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 7.323      ;
+; -6.298 ; ver_reg[6]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 7.323      ;
+; -6.298 ; ver_reg[3]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 7.331      ;
+; -6.286 ; ver_reg[0]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.007     ; 7.317      ;
+; -6.283 ; hor_reg[3]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.321      ;
+; -6.283 ; hor_reg[5]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.319      ;
+; -6.281 ; hor_reg[6]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.311      ;
+; -6.270 ; ver_reg[4]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 7.294      ;
+; -6.267 ; hor_reg[6]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.303      ;
+; -6.248 ; ver_reg[5]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.284      ;
+; -6.242 ; hor_reg[10]                   ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.272      ;
+; -6.240 ; hor_reg[5]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.279      ;
+; -6.239 ; hor_reg[7]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.269      ;
+; -6.238 ; hor_reg[8]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 7.280      ;
+; -6.237 ; ver_reg[3]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 7.270      ;
+; -6.232 ; ver_reg[8]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.007     ; 7.263      ;
+; -6.228 ; ver_reg[1]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.264      ;
+; -6.225 ; ver_reg[7]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 7.249      ;
+; -6.223 ; ver_reg[8]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 7.260      ;
+; -6.219 ; ver_reg[3]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.251      ;
+; -6.217 ; hor_reg[2]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.253      ;
+; -6.204 ; ver_reg[4]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 7.239      ;
+; -6.203 ; hor_reg[5]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.241      ;
+; -6.202 ; hor_reg[8]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.240      ;
+; -6.201 ; ver_reg[4]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.233      ;
+; -6.201 ; hor_reg[4]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.004      ; 7.243      ;
+; -6.192 ; hor_reg[2]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.230      ;
+; -6.190 ; hor_reg[3]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.226      ;
+; -6.184 ; hor_reg[2]                    ; disp_player[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.214      ;
+; -6.184 ; hor_reg[10]                   ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.220      ;
+; -6.183 ; ver_reg[3]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 7.198      ;
+; -6.177 ; ver_reg[9]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 7.193      ;
+; -6.177 ; ver_reg[2]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.211      ;
+; -6.176 ; ver_reg[6]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 7.192      ;
+; -6.175 ; ver_reg[6]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.209      ;
+; -6.174 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.201      ;
+; -6.174 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.201      ;
+; -6.174 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.201      ;
+; -6.174 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.201      ;
+; -6.174 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.201      ;
+; -6.174 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.201      ;
+; -6.174 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.201      ;
+; -6.174 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 7.201      ;
+; -6.169 ; hor_reg[0]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.208      ;
+; -6.169 ; ver_reg[3]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.205      ;
+; -6.163 ; ver_reg[7]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 7.196      ;
+; -6.163 ; hor_reg[4]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.202      ;
+; -6.157 ; ver_reg[2]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.022     ; 7.173      ;
+; -6.156 ; player_y[1][0][3]             ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 7.189      ;
+; -6.154 ; ver_reg[1]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 7.186      ;
+; -6.151 ; player_x[8][16][0]            ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 7.189      ;
+; -6.150 ; ver_reg[7]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 7.183      ;
+; -6.147 ; ver_reg[5]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 7.181      ;
+; -6.144 ; hor_reg[2]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.183      ;
+; -6.142 ; ver_reg[3]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 7.166      ;
+; -6.140 ; ver_reg[6]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 7.176      ;
+; -6.133 ; ver_reg[1]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 7.166      ;
+; -6.130 ; hor_reg[9]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.169      ;
+; -6.128 ; ver_reg[6]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 7.165      ;
+; -6.126 ; hor_reg[0]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 7.165      ;
+; -6.124 ; hor_reg[9]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 7.154      ;
+; -6.123 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 7.144      ;
+; -6.123 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 7.144      ;
+; -6.123 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 7.144      ;
+; -6.123 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 7.144      ;
+; -6.123 ; uarttestTLE:uart|smallMem[32] ; player_x[4][0][4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 7.144      ;
+; -6.123 ; uarttestTLE:uart|smallMem[32] ; player_x[4][0][5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 7.144      ;
+; -6.121 ; ver_reg[4]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.005     ; 7.154      ;
 +--------+-------------------------------+--------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -279,106 +279,106 @@ No paths to report.
 +-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.445 ; hor_reg[10]                                                  ; hor_reg[10]                                                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; flash_count[0]                                               ; flash_count[0]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[2]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[2]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[3]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[3]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; uarttestTLE:uart|uarttest:uart1|rxfinished                   ; uarttestTLE:uart|uarttest:uart1|rxfinished                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[1]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[3]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[1]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; flash_count[2]                                               ; flash_count[2]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; flash_count[1]                                               ; flash_count[1]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; hor_reg[10]                                                  ; hor_reg[10]                                                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; flash_boarders                                               ; flash_boarders                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; ver_sync                                                     ; ver_sync                                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.612 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|smallMem[5]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.898      ;
-; 0.613 ; uarttestTLE:uart|smallMem[13]                                ; uarttestTLE:uart|smallMem[21]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.899      ;
-; 0.618 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|smallMem[6]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.904      ;
-; 0.619 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|smallMem[7]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.905      ;
-; 0.622 ; uarttestTLE:uart|smallMem[9]                                 ; player_y[2][0][9]                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.908      ;
-; 0.626 ; uarttestTLE:uart|smallMem[12]                                ; uarttestTLE:uart|smallMem[20]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.912      ;
+; 0.618 ; uarttestTLE:uart|smallMem[15]                                ; uarttestTLE:uart|smallMem[23]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.904      ;
+; 0.621 ; uarttestTLE:uart|smallMem[16]                                ; uarttestTLE:uart|smallMem[24]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.907      ;
+; 0.621 ; uarttestTLE:uart|smallMem[13]                                ; uarttestTLE:uart|smallMem[21]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.907      ;
+; 0.624 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|smallMem[7]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.910      ;
+; 0.627 ; uarttestTLE:uart|smallMem[6]                                 ; uarttestTLE:uart|smallMem[14]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.913      ;
 ; 0.629 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.915      ;
-; 0.630 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|smallMem[3]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.916      ;
-; 0.631 ; uarttestTLE:uart|smallMem[8]                                 ; uarttestTLE:uart|smallMem[16]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.917      ;
-; 0.641 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[1]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.927      ;
-; 0.641 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.927      ;
-; 0.641 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.927      ;
-; 0.665 ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.951      ;
-; 0.666 ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.952      ;
-; 0.761 ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; uarttestTLE:uart|smallMem[4]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.047      ;
-; 0.763 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|smallMem[2]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.049      ;
-; 0.764 ; uarttestTLE:uart|smallMem[15]                                ; uarttestTLE:uart|smallMem[23]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.050      ;
-; 0.769 ; uarttestTLE:uart|smallMem[25]                                ; player_x[4][17][9]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.055      ;
-; 0.774 ; uarttestTLE:uart|smallMem[23]                                ; uarttestTLE:uart|smallMem[31]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.060      ;
-; 0.775 ; uarttestTLE:uart|smallMem[14]                                ; uarttestTLE:uart|smallMem[22]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.061      ;
-; 0.776 ; uarttestTLE:uart|smallMem[10]                                ; uarttestTLE:uart|smallMem[18]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.062      ;
-; 0.777 ; uarttestTLE:uart|uarttest:uart1|Rx_Data_Reg                  ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.063      ;
-; 0.784 ; uarttestTLE:uart|smallMem[0]                                 ; uarttestTLE:uart|smallMem[8]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.070      ;
-; 0.849 ; uarttestTLE:uart|smallMem[11]                                ; uarttestTLE:uart|smallMem[19]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.135      ;
+; 0.640 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.926      ;
+; 0.643 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.929      ;
+; 0.646 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[1]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.932      ;
+; 0.648 ; flash_count[1]                                               ; flash_count[2]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.934      ;
+; 0.764 ; uarttestTLE:uart|uarttest:uart1|Rx_Data_Reg                  ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.050      ;
+; 0.778 ; uarttestTLE:uart|smallMem[10]                                ; uarttestTLE:uart|smallMem[18]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.064      ;
+; 0.787 ; uarttestTLE:uart|smallMem[0]                                 ; uarttestTLE:uart|smallMem[8]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.073      ;
+; 0.787 ; uarttestTLE:uart|smallMem[19]                                ; player_x[0][17][3]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.073      ;
+; 0.790 ; uarttestTLE:uart|smallMem[8]                                 ; uarttestTLE:uart|smallMem[16]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.791 ; uarttestTLE:uart|smallMem[4]                                 ; uarttestTLE:uart|smallMem[12]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.077      ;
+; 0.853 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|smallMem[2]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.139      ;
+; 0.929 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|smallMem[3]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.215      ;
+; 0.968 ; count_value[13]                                              ; count_value[13]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.254      ;
 ; 0.968 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.254      ;
+; 0.972 ; count_value[1]                                               ; count_value[1]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.258      ;
 ; 0.975 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.261      ;
+; 0.976 ; count_value[15]                                              ; count_value[15]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.262      ;
 ; 0.976 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.262      ;
 ; 0.976 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.262      ;
-; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; count_value[4]                                               ; count_value[4]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; count_value[17]                                              ; count_value[17]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; count_value[20]                                              ; count_value[20]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
 ; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
 ; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
 ; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
 ; 0.977 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.263      ;
-; 0.980 ; hor_reg[0]                                                   ; hor_reg[0]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.266      ;
-; 0.980 ; hor_reg[1]                                                   ; hor_reg[1]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.266      ;
-; 0.981 ; hor_reg[9]                                                   ; hor_reg[9]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.267      ;
-; 0.981 ; ver_reg[0]                                                   ; ver_reg[0]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.267      ;
-; 0.981 ; ver_reg[2]                                                   ; ver_reg[2]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.267      ;
-; 0.985 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.271      ;
+; 0.981 ; count_value[11]                                              ; count_value[11]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.267      ;
+; 0.981 ; count_value[12]                                              ; count_value[12]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.267      ;
+; 0.983 ; count_value[8]                                               ; count_value[8]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.269      ;
+; 0.983 ; count_value[22]                                              ; count_value[22]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.269      ;
+; 0.984 ; count_value[10]                                              ; count_value[10]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.270      ;
+; 0.984 ; count_value[14]                                              ; count_value[14]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.270      ;
+; 0.985 ; count_value[24]                                              ; count_value[24]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.271      ;
+; 0.985 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.271      ;
+; 0.987 ; count_value[6]                                               ; count_value[6]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.273      ;
+; 0.988 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|smallMem[6]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.274      ;
+; 0.988 ; hor_reg[1]                                                   ; hor_reg[1]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.274      ;
+; 0.988 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.274      ;
 ; 0.989 ; hor_reg[2]                                                   ; hor_reg[2]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.275      ;
-; 0.991 ; hor_reg[10]                                                  ; hor_reg[4]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.277      ;
+; 0.990 ; hor_reg[9]                                                   ; hor_reg[9]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.276      ;
+; 0.992 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.278      ;
 ; 0.993 ; hor_reg[7]                                                   ; hor_reg[7]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.279      ;
-; 0.994 ; uarttestTLE:uart|smallMem[30]                                ; uarttestTLE:uart|smallMem[38]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.280      ;
-; 0.995 ; uarttestTLE:uart|smallMem[27]                                ; uarttestTLE:uart|smallMem[35]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.281      ;
-; 1.004 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.290      ;
-; 1.010 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.296      ;
+; 0.993 ; hor_reg[10]                                                  ; hor_reg[4]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.279      ;
+; 0.994 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.280      ;
+; 1.002 ; ver_reg[8]                                                   ; ver_reg[8]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.288      ;
+; 1.004 ; ver_reg[6]                                                   ; ver_reg[6]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.290      ;
+; 1.008 ; uarttestTLE:uart|uarttest:uart1|rxfinished                   ; uarttestTLE:uart|datarxedtrig                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.008      ; 1.302      ;
+; 1.015 ; count_value[21]                                              ; count_value[21]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.301      ;
 ; 1.015 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.301      ;
+; 1.016 ; count_value[16]                                              ; count_value[16]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; count_value[18]                                              ; count_value[18]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; count_value[19]                                              ; count_value[19]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; count_value[23]                                              ; count_value[23]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; count_value[25]                                              ; count_value[25]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
 ; 1.016 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
 ; 1.016 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
 ; 1.016 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
 ; 1.016 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
 ; 1.016 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.302      ;
-; 1.018 ; uarttestTLE:uart|smallMem[24]                                ; player_x[4][17][8]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.304      ;
-; 1.020 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE ; uarttestTLE:uart|uarttest:uart1|rxfinished                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.306      ;
-; 1.021 ; hor_reg[3]                                                   ; hor_reg[3]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.307      ;
-; 1.021 ; hor_reg[5]                                                   ; hor_reg[5]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.307      ;
-; 1.023 ; uarttestTLE:uart|smallMem[1]                                 ; uarttestTLE:uart|smallMem[9]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.309      ;
-; 1.024 ; ver_reg[6]                                                   ; ver_reg[6]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.310      ;
-; 1.024 ; ver_reg[8]                                                   ; ver_reg[8]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.310      ;
+; 1.019 ; count_value[2]                                               ; count_value[2]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.305      ;
+; 1.022 ; count_value[0]                                               ; count_value[0]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.308      ;
+; 1.024 ; count_value[3]                                               ; count_value[3]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.310      ;
+; 1.025 ; count_value[7]                                               ; count_value[7]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.311      ;
+; 1.025 ; hor_reg[3]                                                   ; hor_reg[3]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.311      ;
+; 1.025 ; hor_reg[5]                                                   ; hor_reg[5]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.311      ;
+; 1.025 ; hor_reg[6]                                                   ; hor_reg[6]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.311      ;
+; 1.027 ; count_value[9]                                               ; count_value[9]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.313      ;
 ; 1.027 ; hor_reg[8]                                                   ; hor_reg[8]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.313      ;
-; 1.028 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.314      ;
-; 1.028 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.314      ;
-; 1.105 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[3]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.391      ;
-; 1.116 ; ver_reg[9]                                                   ; ver_reg[9]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.402      ;
-; 1.135 ; uarttestTLE:uart|smallMem[16]                                ; uarttestTLE:uart|smallMem[24]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.422      ;
-; 1.146 ; uarttestTLE:uart|smallMem[3]                                 ; player_y[0][21][3]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.431      ;
-; 1.148 ; uarttestTLE:uart|smallMem[8]                                 ; player_y[4][21][8]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.434      ;
-; 1.149 ; uarttestTLE:uart|smallMem[5]                                 ; player_y[0][21][5]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.434      ;
-; 1.152 ; uarttestTLE:uart|smallMem[8]                                 ; player_y[9][21][8]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.438      ;
-; 1.156 ; uarttestTLE:uart|smallMem[5]                                 ; player_y[7][21][5]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.439      ;
-; 1.158 ; uarttestTLE:uart|smallMem[20]                                ; player_x[9][10][4]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.439      ;
-; 1.167 ; uarttestTLE:uart|smallMem[38]                                ; ledsreg[6]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.449      ;
-; 1.173 ; uarttestTLE:uart|smallMem[7]                                 ; player_y[7][21][7]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.456      ;
-; 1.179 ; uarttestTLE:uart|smallMem[7]                                 ; player_y[0][21][7]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.464      ;
-; 1.199 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.485      ;
-; 1.203 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|smallMem[1]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.490      ;
-; 1.205 ; ver_reg[5]                                                   ; ver_reg[5]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.491      ;
-; 1.206 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.492      ;
-; 1.222 ; hor_reg[6]                                                   ; hor_reg[6]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.508      ;
 +-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -495,8 +495,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; rst_n     ; CLOCK_50   ; 4.009 ; 4.009 ; Rise       ; CLOCK_50        ;
-; uart_rx_i ; CLOCK_50   ; 4.418 ; 4.418 ; Rise       ; CLOCK_50        ;
+; rst_n     ; CLOCK_50   ; 4.476 ; 4.476 ; Rise       ; CLOCK_50        ;
+; uart_rx_i ; CLOCK_50   ; 4.822 ; 4.822 ; Rise       ; CLOCK_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -505,8 +505,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; rst_n     ; CLOCK_50   ; -0.692 ; -0.692 ; Rise       ; CLOCK_50        ;
-; uart_rx_i ; CLOCK_50   ; -4.170 ; -4.170 ; Rise       ; CLOCK_50        ;
+; rst_n     ; CLOCK_50   ; -0.983 ; -0.983 ; Rise       ; CLOCK_50        ;
+; uart_rx_i ; CLOCK_50   ; -4.574 ; -4.574 ; Rise       ; CLOCK_50        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -515,20 +515,20 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; LED[*]    ; CLOCK_50   ; 8.454  ; 8.454  ; Rise       ; CLOCK_50        ;
-;  LED[0]   ; CLOCK_50   ; 8.117  ; 8.117  ; Rise       ; CLOCK_50        ;
-;  LED[1]   ; CLOCK_50   ; 8.136  ; 8.136  ; Rise       ; CLOCK_50        ;
-;  LED[2]   ; CLOCK_50   ; 8.111  ; 8.111  ; Rise       ; CLOCK_50        ;
-;  LED[3]   ; CLOCK_50   ; 8.097  ; 8.097  ; Rise       ; CLOCK_50        ;
-;  LED[4]   ; CLOCK_50   ; 8.454  ; 8.454  ; Rise       ; CLOCK_50        ;
-;  LED[5]   ; CLOCK_50   ; 8.436  ; 8.436  ; Rise       ; CLOCK_50        ;
-;  LED[6]   ; CLOCK_50   ; 8.099  ; 8.099  ; Rise       ; CLOCK_50        ;
-;  LED[7]   ; CLOCK_50   ; 8.102  ; 8.102  ; Rise       ; CLOCK_50        ;
-; VGA_BLUE  ; CLOCK_50   ; 13.317 ; 13.317 ; Rise       ; CLOCK_50        ;
-; VGA_GREEN ; CLOCK_50   ; 13.287 ; 13.287 ; Rise       ; CLOCK_50        ;
-; VGA_HS    ; CLOCK_50   ; 8.420  ; 8.420  ; Rise       ; CLOCK_50        ;
-; VGA_RED   ; CLOCK_50   ; 14.742 ; 14.742 ; Rise       ; CLOCK_50        ;
-; VGA_VS    ; CLOCK_50   ; 7.278  ; 7.278  ; Rise       ; CLOCK_50        ;
+; LED[*]    ; CLOCK_50   ; 8.503  ; 8.503  ; Rise       ; CLOCK_50        ;
+;  LED[0]   ; CLOCK_50   ; 7.988  ; 7.988  ; Rise       ; CLOCK_50        ;
+;  LED[1]   ; CLOCK_50   ; 8.263  ; 8.263  ; Rise       ; CLOCK_50        ;
+;  LED[2]   ; CLOCK_50   ; 8.503  ; 8.503  ; Rise       ; CLOCK_50        ;
+;  LED[3]   ; CLOCK_50   ; 7.723  ; 7.723  ; Rise       ; CLOCK_50        ;
+;  LED[4]   ; CLOCK_50   ; 8.316  ; 8.316  ; Rise       ; CLOCK_50        ;
+;  LED[5]   ; CLOCK_50   ; 8.253  ; 8.253  ; Rise       ; CLOCK_50        ;
+;  LED[6]   ; CLOCK_50   ; 8.451  ; 8.451  ; Rise       ; CLOCK_50        ;
+;  LED[7]   ; CLOCK_50   ; 8.389  ; 8.389  ; Rise       ; CLOCK_50        ;
+; VGA_BLUE  ; CLOCK_50   ; 12.439 ; 12.439 ; Rise       ; CLOCK_50        ;
+; VGA_GREEN ; CLOCK_50   ; 13.634 ; 13.634 ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 7.266  ; 7.266  ; Rise       ; CLOCK_50        ;
+; VGA_RED   ; CLOCK_50   ; 12.429 ; 12.429 ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 8.210  ; 8.210  ; Rise       ; CLOCK_50        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -537,20 +537,20 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; LED[*]    ; CLOCK_50   ; 8.097  ; 8.097  ; Rise       ; CLOCK_50        ;
-;  LED[0]   ; CLOCK_50   ; 8.117  ; 8.117  ; Rise       ; CLOCK_50        ;
-;  LED[1]   ; CLOCK_50   ; 8.136  ; 8.136  ; Rise       ; CLOCK_50        ;
-;  LED[2]   ; CLOCK_50   ; 8.111  ; 8.111  ; Rise       ; CLOCK_50        ;
-;  LED[3]   ; CLOCK_50   ; 8.097  ; 8.097  ; Rise       ; CLOCK_50        ;
-;  LED[4]   ; CLOCK_50   ; 8.454  ; 8.454  ; Rise       ; CLOCK_50        ;
-;  LED[5]   ; CLOCK_50   ; 8.436  ; 8.436  ; Rise       ; CLOCK_50        ;
-;  LED[6]   ; CLOCK_50   ; 8.099  ; 8.099  ; Rise       ; CLOCK_50        ;
-;  LED[7]   ; CLOCK_50   ; 8.102  ; 8.102  ; Rise       ; CLOCK_50        ;
-; VGA_BLUE  ; CLOCK_50   ; 10.261 ; 10.261 ; Rise       ; CLOCK_50        ;
-; VGA_GREEN ; CLOCK_50   ; 11.747 ; 11.747 ; Rise       ; CLOCK_50        ;
-; VGA_HS    ; CLOCK_50   ; 8.420  ; 8.420  ; Rise       ; CLOCK_50        ;
-; VGA_RED   ; CLOCK_50   ; 11.686 ; 11.686 ; Rise       ; CLOCK_50        ;
-; VGA_VS    ; CLOCK_50   ; 7.278  ; 7.278  ; Rise       ; CLOCK_50        ;
+; LED[*]    ; CLOCK_50   ; 7.723  ; 7.723  ; Rise       ; CLOCK_50        ;
+;  LED[0]   ; CLOCK_50   ; 7.988  ; 7.988  ; Rise       ; CLOCK_50        ;
+;  LED[1]   ; CLOCK_50   ; 8.263  ; 8.263  ; Rise       ; CLOCK_50        ;
+;  LED[2]   ; CLOCK_50   ; 8.503  ; 8.503  ; Rise       ; CLOCK_50        ;
+;  LED[3]   ; CLOCK_50   ; 7.723  ; 7.723  ; Rise       ; CLOCK_50        ;
+;  LED[4]   ; CLOCK_50   ; 8.316  ; 8.316  ; Rise       ; CLOCK_50        ;
+;  LED[5]   ; CLOCK_50   ; 8.253  ; 8.253  ; Rise       ; CLOCK_50        ;
+;  LED[6]   ; CLOCK_50   ; 8.451  ; 8.451  ; Rise       ; CLOCK_50        ;
+;  LED[7]   ; CLOCK_50   ; 8.389  ; 8.389  ; Rise       ; CLOCK_50        ;
+; VGA_BLUE  ; CLOCK_50   ; 9.982  ; 9.982  ; Rise       ; CLOCK_50        ;
+; VGA_GREEN ; CLOCK_50   ; 10.008 ; 10.008 ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 7.266  ; 7.266  ; Rise       ; CLOCK_50        ;
+; VGA_RED   ; CLOCK_50   ; 9.972  ; 9.972  ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 8.210  ; 8.210  ; Rise       ; CLOCK_50        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -559,7 +559,7 @@ No paths to report.
 +------------+--------------+--------+----+----+--------+
 ; Input Port ; Output Port  ; RR     ; RF ; FR ; FF     ;
 +------------+--------------+--------+----+----+--------+
-; uart_rx_i  ; uart_rx_dump ; 10.144 ;    ;    ; 10.144 ;
+; uart_rx_i  ; uart_rx_dump ; 10.021 ;    ;    ; 10.021 ;
 +------------+--------------+--------+----+----+--------+
 
 
@@ -568,7 +568,7 @@ No paths to report.
 +------------+--------------+--------+----+----+--------+
 ; Input Port ; Output Port  ; RR     ; RF ; FR ; FF     ;
 +------------+--------------+--------+----+----+--------+
-; uart_rx_i  ; uart_rx_dump ; 10.144 ;    ;    ; 10.144 ;
+; uart_rx_i  ; uart_rx_dump ; 10.021 ;    ;    ; 10.021 ;
 +------------+--------------+--------+----+----+--------+
 
 
@@ -577,7 +577,7 @@ No paths to report.
 +----------+--------+---------------+
 ; Clock    ; Slack  ; End Point TNS ;
 +----------+--------+---------------+
-; CLOCK_50 ; -1.903 ; -3268.287     ;
+; CLOCK_50 ; -2.012 ; -3244.563     ;
 +----------+--------+---------------+
 
 
@@ -607,7 +607,7 @@ No paths to report.
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; CLOCK_50 ; -1.380 ; -2199.380          ;
+; CLOCK_50 ; -1.380 ; -2229.380          ;
 +----------+--------+--------------------+
 
 
@@ -616,106 +616,106 @@ No paths to report.
 +--------+-------------------------------+--------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                     ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------------+--------------------+--------------+-------------+--------------+------------+------------+
-; -1.903 ; hor_reg[5]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 2.922      ;
-; -1.880 ; hor_reg[9]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 2.899      ;
-; -1.877 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.893      ;
-; -1.877 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.893      ;
-; -1.877 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.893      ;
-; -1.877 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.893      ;
-; -1.877 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.893      ;
-; -1.877 ; uarttestTLE:uart|smallMem[32] ; player_x[9][11][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.893      ;
-; -1.858 ; uarttestTLE:uart|smallMem[33] ; player_x[9][11][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.874      ;
-; -1.858 ; uarttestTLE:uart|smallMem[33] ; player_x[9][11][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.874      ;
-; -1.858 ; uarttestTLE:uart|smallMem[33] ; player_x[9][11][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.874      ;
-; -1.858 ; uarttestTLE:uart|smallMem[33] ; player_x[9][11][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.874      ;
-; -1.858 ; uarttestTLE:uart|smallMem[33] ; player_x[9][11][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.874      ;
-; -1.858 ; uarttestTLE:uart|smallMem[33] ; player_x[9][11][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.874      ;
-; -1.850 ; hor_reg[4]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 2.876      ;
-; -1.849 ; ver_reg[3]                    ; disp_player[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 2.877      ;
-; -1.844 ; uarttestTLE:uart|smallMem[32] ; player_x[8][15][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 2.866      ;
-; -1.844 ; uarttestTLE:uart|smallMem[32] ; player_x[8][15][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 2.866      ;
-; -1.839 ; hor_reg[7]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 2.865      ;
-; -1.838 ; ver_reg[9]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 2.868      ;
-; -1.835 ; hor_reg[2]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 2.870      ;
-; -1.831 ; ver_reg[2]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 2.861      ;
-; -1.825 ; uarttestTLE:uart|smallMem[33] ; player_x[8][15][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 2.847      ;
-; -1.825 ; uarttestTLE:uart|smallMem[33] ; player_x[8][15][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 2.847      ;
-; -1.823 ; uarttestTLE:uart|smallMem[33] ; player_x[7][15][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.839      ;
-; -1.819 ; uarttestTLE:uart|smallMem[33] ; player_y[3][35][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.828      ;
-; -1.819 ; uarttestTLE:uart|smallMem[33] ; player_y[3][35][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.828      ;
-; -1.819 ; uarttestTLE:uart|smallMem[33] ; player_y[3][42][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.828      ;
-; -1.819 ; uarttestTLE:uart|smallMem[33] ; player_y[3][42][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.828      ;
-; -1.816 ; ver_reg[1]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.012      ; 2.860      ;
-; -1.815 ; uarttestTLE:uart|smallMem[33] ; player_x[7][15][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.824      ;
-; -1.815 ; uarttestTLE:uart|smallMem[33] ; player_x[7][15][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.824      ;
-; -1.815 ; uarttestTLE:uart|smallMem[33] ; player_x[7][10][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.824      ;
-; -1.815 ; uarttestTLE:uart|smallMem[33] ; player_x[7][10][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.824      ;
-; -1.815 ; uarttestTLE:uart|smallMem[33] ; player_x[7][2][2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.824      ;
-; -1.815 ; uarttestTLE:uart|smallMem[33] ; player_x[7][2][3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.824      ;
-; -1.815 ; uarttestTLE:uart|smallMem[33] ; player_x[7][9][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.824      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][16][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][35][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][35][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][35][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][35][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][35][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][35][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][21][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][21][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][21][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][21][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][21][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][21][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][21][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; uarttestTLE:uart|smallMem[32] ; player_y[5][28][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.829      ;
-; -1.814 ; ver_reg[3]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 2.851      ;
-; -1.814 ; ver_reg[1]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.005      ; 2.851      ;
-; -1.812 ; uarttestTLE:uart|smallMem[35] ; player_x[7][15][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.828      ;
-; -1.811 ; hor_reg[6]                    ; disp_player[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.013     ; 2.830      ;
-; -1.811 ; hor_reg[5]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 2.846      ;
-; -1.809 ; hor_reg[9]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 2.839      ;
-; -1.808 ; uarttestTLE:uart|smallMem[33] ; player_x[7][15][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.823      ;
-; -1.808 ; uarttestTLE:uart|smallMem[33] ; player_x[7][10][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.823      ;
-; -1.808 ; uarttestTLE:uart|smallMem[33] ; player_x[7][10][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.823      ;
-; -1.808 ; uarttestTLE:uart|smallMem[33] ; player_x[7][0][2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.823      ;
-; -1.808 ; uarttestTLE:uart|smallMem[33] ; player_x[7][0][3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.823      ;
-; -1.808 ; uarttestTLE:uart|smallMem[35] ; player_y[3][35][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.817      ;
-; -1.808 ; uarttestTLE:uart|smallMem[35] ; player_y[3][35][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.817      ;
-; -1.808 ; uarttestTLE:uart|smallMem[35] ; player_y[3][42][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.817      ;
-; -1.808 ; uarttestTLE:uart|smallMem[35] ; player_y[3][42][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.817      ;
-; -1.807 ; hor_reg[5]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.006     ; 2.833      ;
-; -1.807 ; hor_reg[4]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 2.837      ;
-; -1.806 ; uarttestTLE:uart|smallMem[32] ; player_y[9][35][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.815      ;
-; -1.806 ; uarttestTLE:uart|smallMem[32] ; player_y[9][35][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.815      ;
-; -1.806 ; uarttestTLE:uart|smallMem[32] ; player_y[9][35][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.815      ;
-; -1.806 ; uarttestTLE:uart|smallMem[32] ; player_y[9][35][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.815      ;
-; -1.806 ; uarttestTLE:uart|smallMem[32] ; player_y[9][35][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.815      ;
-; -1.804 ; uarttestTLE:uart|smallMem[35] ; player_x[7][15][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.813      ;
-; -1.804 ; uarttestTLE:uart|smallMem[35] ; player_x[7][15][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.813      ;
-; -1.804 ; uarttestTLE:uart|smallMem[35] ; player_x[7][10][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.813      ;
-; -1.804 ; uarttestTLE:uart|smallMem[35] ; player_x[7][10][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.813      ;
-; -1.804 ; uarttestTLE:uart|smallMem[35] ; player_x[7][2][2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.813      ;
-; -1.804 ; uarttestTLE:uart|smallMem[35] ; player_x[7][2][3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.813      ;
-; -1.804 ; uarttestTLE:uart|smallMem[35] ; player_x[7][9][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.813      ;
-; -1.803 ; uarttestTLE:uart|smallMem[34] ; player_x[9][11][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.819      ;
-; -1.803 ; uarttestTLE:uart|smallMem[34] ; player_x[9][11][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.819      ;
-; -1.803 ; uarttestTLE:uart|smallMem[34] ; player_x[9][11][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.819      ;
-; -1.803 ; uarttestTLE:uart|smallMem[34] ; player_x[9][11][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.819      ;
-; -1.803 ; uarttestTLE:uart|smallMem[34] ; player_x[9][11][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.819      ;
-; -1.803 ; uarttestTLE:uart|smallMem[34] ; player_x[9][11][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.016     ; 2.819      ;
-; -1.800 ; uarttestTLE:uart|smallMem[33] ; player_y[2][42][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.029     ; 2.803      ;
-; -1.800 ; uarttestTLE:uart|smallMem[33] ; player_y[2][42][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.029     ; 2.803      ;
-; -1.797 ; uarttestTLE:uart|smallMem[35] ; player_x[7][15][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.812      ;
-; -1.797 ; uarttestTLE:uart|smallMem[35] ; player_x[7][10][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.812      ;
-; -1.797 ; uarttestTLE:uart|smallMem[35] ; player_x[7][10][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.812      ;
-; -1.797 ; uarttestTLE:uart|smallMem[35] ; player_x[7][0][2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.812      ;
-; -1.797 ; uarttestTLE:uart|smallMem[35] ; player_x[7][0][3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.812      ;
-; -1.795 ; uarttestTLE:uart|smallMem[32] ; player_x[9][13][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.804      ;
-; -1.795 ; uarttestTLE:uart|smallMem[32] ; player_x[9][13][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.804      ;
-; -1.795 ; uarttestTLE:uart|smallMem[32] ; player_x[9][13][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.023     ; 2.804      ;
-; -1.795 ; uarttestTLE:uart|smallMem[33] ; player_y[5][16][0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.810      ;
-; -1.795 ; uarttestTLE:uart|smallMem[33] ; player_y[5][35][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.810      ;
-; -1.795 ; uarttestTLE:uart|smallMem[33] ; player_y[5][35][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.017     ; 2.810      ;
+; -2.012 ; hor_reg[8]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 3.036      ;
+; -1.957 ; hor_reg[7]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 2.992      ;
+; -1.910 ; hor_reg[7]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.934      ;
+; -1.878 ; hor_reg[0]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.902      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.879      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.879      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.879      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.879      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[4][0][4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.879      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[4][0][5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.879      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.886      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.886      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.886      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.886      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.886      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.886      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.886      ;
+; -1.862 ; uarttestTLE:uart|smallMem[32] ; player_x[8][16][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.886      ;
+; -1.851 ; hor_reg[4]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 2.879      ;
+; -1.836 ; hor_reg[9]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 2.864      ;
+; -1.834 ; uarttestTLE:uart|smallMem[18] ; player_x[4][22][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.867      ;
+; -1.826 ; uarttestTLE:uart|smallMem[32] ; player_x[4][15][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.020     ; 2.838      ;
+; -1.826 ; uarttestTLE:uart|smallMem[32] ; player_x[4][12][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.020     ; 2.838      ;
+; -1.826 ; uarttestTLE:uart|smallMem[32] ; player_x[4][10][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.020     ; 2.838      ;
+; -1.826 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.020     ; 2.838      ;
+; -1.826 ; uarttestTLE:uart|smallMem[32] ; player_x[4][13][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.020     ; 2.838      ;
+; -1.826 ; uarttestTLE:uart|smallMem[32] ; player_x[4][4][0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.020     ; 2.838      ;
+; -1.824 ; ver_reg[4]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 2.844      ;
+; -1.823 ; hor_reg[5]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 2.858      ;
+; -1.821 ; hor_reg[2]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 2.856      ;
+; -1.818 ; hor_reg[6]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.850      ;
+; -1.817 ; hor_reg[8]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.849      ;
+; -1.816 ; uarttestTLE:uart|smallMem[32] ; player_x[0][10][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 2.834      ;
+; -1.816 ; uarttestTLE:uart|smallMem[32] ; player_x[0][10][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 2.834      ;
+; -1.816 ; uarttestTLE:uart|smallMem[32] ; player_x[4][12][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 2.837      ;
+; -1.816 ; uarttestTLE:uart|smallMem[32] ; player_x[4][12][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 2.836      ;
+; -1.816 ; uarttestTLE:uart|smallMem[32] ; player_x[4][12][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 2.836      ;
+; -1.816 ; uarttestTLE:uart|smallMem[32] ; player_x[4][12][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 2.836      ;
+; -1.816 ; uarttestTLE:uart|smallMem[32] ; player_x[4][12][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 2.836      ;
+; -1.816 ; uarttestTLE:uart|smallMem[32] ; player_x[4][12][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.012     ; 2.836      ;
+; -1.812 ; ver_reg[0]                    ; disp_player[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 2.841      ;
+; -1.811 ; hor_reg[5]                    ; disp_player[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.835      ;
+; -1.810 ; uarttestTLE:uart|smallMem[32] ; player_x[4][2][2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 2.828      ;
+; -1.810 ; uarttestTLE:uart|smallMem[32] ; player_x[4][2][3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 2.828      ;
+; -1.810 ; uarttestTLE:uart|smallMem[32] ; player_x[4][15][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 2.828      ;
+; -1.809 ; uarttestTLE:uart|smallMem[32] ; player_x[0][12][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.820      ;
+; -1.809 ; uarttestTLE:uart|smallMem[32] ; player_x[0][12][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.820      ;
+; -1.809 ; uarttestTLE:uart|smallMem[32] ; player_x[0][12][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.820      ;
+; -1.809 ; uarttestTLE:uart|smallMem[32] ; player_x[0][12][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.820      ;
+; -1.809 ; uarttestTLE:uart|smallMem[32] ; player_x[0][12][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.820      ;
+; -1.809 ; uarttestTLE:uart|smallMem[32] ; player_x[0][12][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.820      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[4][13][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.826      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[4][13][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.826      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[4][13][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.826      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[4][13][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.826      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[4][0][4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.826      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[4][0][5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.826      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[8][16][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.833      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[8][16][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.833      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[8][16][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.833      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[8][16][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.833      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[8][16][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.833      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[8][16][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.833      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[8][16][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.833      ;
+; -1.809 ; uarttestTLE:uart|smallMem[33] ; player_x[8][16][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.008     ; 2.833      ;
+; -1.807 ; uarttestTLE:uart|smallMem[36] ; player_x[4][13][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.824      ;
+; -1.807 ; uarttestTLE:uart|smallMem[36] ; player_x[4][13][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.824      ;
+; -1.807 ; uarttestTLE:uart|smallMem[36] ; player_x[4][13][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.824      ;
+; -1.807 ; uarttestTLE:uart|smallMem[36] ; player_x[4][13][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.824      ;
+; -1.807 ; uarttestTLE:uart|smallMem[36] ; player_x[4][0][4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.824      ;
+; -1.807 ; uarttestTLE:uart|smallMem[36] ; player_x[4][0][5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.015     ; 2.824      ;
+; -1.806 ; hor_reg[3]                    ; disp_player[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.002     ; 2.836      ;
+; -1.806 ; ver_reg[8]                    ; disp_player[9]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.837      ;
+; -1.803 ; hor_reg[8]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 2.831      ;
+; -1.802 ; uarttestTLE:uart|smallMem[32] ; player_x[8][17][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.813      ;
+; -1.802 ; uarttestTLE:uart|smallMem[32] ; player_x[8][17][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.813      ;
+; -1.802 ; uarttestTLE:uart|smallMem[32] ; player_x[8][19][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.813      ;
+; -1.802 ; uarttestTLE:uart|smallMem[32] ; player_x[8][19][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.813      ;
+; -1.802 ; uarttestTLE:uart|smallMem[32] ; player_x[8][19][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.813      ;
+; -1.802 ; uarttestTLE:uart|smallMem[32] ; player_x[8][19][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.813      ;
+; -1.802 ; uarttestTLE:uart|smallMem[32] ; player_x[8][19][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.813      ;
+; -1.802 ; uarttestTLE:uart|smallMem[32] ; player_x[8][22][9] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.813      ;
+; -1.802 ; uarttestTLE:uart|smallMem[32] ; player_x[8][22][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.021     ; 2.813      ;
+; -1.800 ; ver_reg[9]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.003     ; 2.829      ;
+; -1.799 ; uarttestTLE:uart|smallMem[32] ; player_x[6][19][6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 2.820      ;
+; -1.799 ; uarttestTLE:uart|smallMem[32] ; player_x[6][19][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 2.820      ;
+; -1.799 ; uarttestTLE:uart|smallMem[32] ; player_x[6][19][5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 2.820      ;
+; -1.799 ; uarttestTLE:uart|smallMem[32] ; player_x[6][19][4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 2.820      ;
+; -1.799 ; uarttestTLE:uart|smallMem[32] ; player_x[6][19][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 2.820      ;
+; -1.799 ; uarttestTLE:uart|smallMem[32] ; player_x[6][19][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.011     ; 2.820      ;
+; -1.797 ; hor_reg[6]                    ; disp_player[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.003      ; 2.832      ;
+; -1.795 ; hor_reg[5]                    ; disp_player[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.004     ; 2.823      ;
+; -1.795 ; hor_reg[1]                    ; disp_player[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.827      ;
+; -1.794 ; uarttestTLE:uart|smallMem[32] ; player_y[4][10][1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 2.807      ;
+; -1.794 ; uarttestTLE:uart|smallMem[32] ; player_y[4][7][2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 2.807      ;
+; -1.793 ; uarttestTLE:uart|smallMem[32] ; player_y[4][10][2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 2.806      ;
+; -1.793 ; uarttestTLE:uart|smallMem[32] ; player_y[4][7][1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.019     ; 2.806      ;
+; -1.793 ; uarttestTLE:uart|smallMem[32] ; player_x[8][21][8] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.014     ; 2.811      ;
+; -1.790 ; uarttestTLE:uart|smallMem[18] ; player_x[4][22][7] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.823      ;
+; -1.788 ; uarttestTLE:uart|smallMem[32] ; player_x[0][10][3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.010     ; 2.810      ;
 +--------+-------------------------------+--------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -724,106 +724,106 @@ No paths to report.
 +-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.215 ; hor_reg[10]                                                  ; hor_reg[10]                                                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; flash_count[0]                                               ; flash_count[0]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[2]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[2]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[3]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[3]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; uarttestTLE:uart|uarttest:uart1|rxfinished                   ; uarttestTLE:uart|uarttest:uart1|rxfinished                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[1]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[3]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[1]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[0]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; flash_count[2]                                               ; flash_count[2]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; flash_count[1]                                               ; flash_count[1]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; hor_reg[10]                                                  ; hor_reg[10]                                                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; flash_boarders                                               ; flash_boarders                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; ver_sync                                                     ; ver_sync                                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.237 ; uarttestTLE:uart|uarttest:uart1|rx_data[5]                   ; uarttestTLE:uart|smallMem[5]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.389      ;
-; 0.237 ; uarttestTLE:uart|smallMem[13]                                ; uarttestTLE:uart|smallMem[21]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.389      ;
-; 0.239 ; uarttestTLE:uart|smallMem[9]                                 ; player_y[2][0][9]                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.391      ;
-; 0.240 ; uarttestTLE:uart|uarttest:uart1|rx_data[6]                   ; uarttestTLE:uart|smallMem[6]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.392      ;
-; 0.240 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|smallMem[7]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.392      ;
+; 0.239 ; uarttestTLE:uart|smallMem[16]                                ; uarttestTLE:uart|smallMem[24]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.240 ; uarttestTLE:uart|smallMem[15]                                ; uarttestTLE:uart|smallMem[23]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.392      ;
+; 0.241 ; uarttestTLE:uart|smallMem[6]                                 ; uarttestTLE:uart|smallMem[14]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; uarttestTLE:uart|smallMem[13]                                ; uarttestTLE:uart|smallMem[21]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.394      ;
 ; 0.243 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[15]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.395      ;
-; 0.245 ; uarttestTLE:uart|smallMem[12]                                ; uarttestTLE:uart|smallMem[20]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.397      ;
-; 0.245 ; uarttestTLE:uart|smallMem[8]                                 ; uarttestTLE:uart|smallMem[16]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.397      ;
-; 0.246 ; uarttestTLE:uart|uarttest:uart1|rx_data[3]                   ; uarttestTLE:uart|smallMem[3]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.398      ;
-; 0.252 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.404      ;
-; 0.253 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[1]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.405      ;
-; 0.253 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.405      ;
-; 0.264 ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.416      ;
-; 0.265 ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.417      ;
-; 0.321 ; uarttestTLE:uart|smallMem[11]                                ; uarttestTLE:uart|smallMem[19]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.473      ;
-; 0.323 ; uarttestTLE:uart|uarttest:uart1|rx_data[4]                   ; uarttestTLE:uart|smallMem[4]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.475      ;
-; 0.325 ; uarttestTLE:uart|smallMem[15]                                ; uarttestTLE:uart|smallMem[23]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.477      ;
-; 0.326 ; uarttestTLE:uart|smallMem[25]                                ; player_x[4][17][9]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.478      ;
-; 0.327 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|smallMem[2]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.479      ;
-; 0.329 ; uarttestTLE:uart|smallMem[23]                                ; uarttestTLE:uart|smallMem[31]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.481      ;
-; 0.332 ; uarttestTLE:uart|smallMem[14]                                ; uarttestTLE:uart|smallMem[22]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.484      ;
-; 0.334 ; uarttestTLE:uart|uarttest:uart1|Rx_Data_Reg                  ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.486      ;
-; 0.334 ; uarttestTLE:uart|smallMem[10]                                ; uarttestTLE:uart|smallMem[18]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.486      ;
-; 0.334 ; uarttestTLE:uart|smallMem[0]                                 ; uarttestTLE:uart|smallMem[8]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.486      ;
+; 0.244 ; uarttestTLE:uart|uarttest:uart1|rx_data[7]                   ; uarttestTLE:uart|smallMem[7]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.396      ;
+; 0.254 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.406      ;
+; 0.254 ; uarttestTLE:uart|rxbytescounter[3]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.406      ;
+; 0.255 ; flash_count[1]                                               ; flash_count[2]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.407      ;
+; 0.257 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[1]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.409      ;
+; 0.323 ; uarttestTLE:uart|uarttest:uart1|rx_data[2]                   ; uarttestTLE:uart|smallMem[2]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.475      ;
+; 0.325 ; uarttestTLE:uart|uarttest:uart1|Rx_Data_Reg                  ; uarttestTLE:uart|uarttest:uart1|Rx_Data                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.477      ;
+; 0.333 ; uarttestTLE:uart|smallMem[10]                                ; uarttestTLE:uart|smallMem[18]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.485      ;
+; 0.334 ; uarttestTLE:uart|smallMem[19]                                ; player_x[0][17][3]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.486      ;
+; 0.337 ; uarttestTLE:uart|smallMem[0]                                 ; uarttestTLE:uart|smallMem[8]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.489      ;
+; 0.337 ; uarttestTLE:uart|smallMem[8]                                 ; uarttestTLE:uart|smallMem[16]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.489      ;
+; 0.339 ; uarttestTLE:uart|smallMem[4]                                 ; uarttestTLE:uart|smallMem[12]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.491      ;
+; 0.355 ; count_value[13]                                              ; count_value[13]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.507      ;
 ; 0.355 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.507      ;
 ; 0.359 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.511      ;
-; 0.360 ; hor_reg[0]                                                   ; hor_reg[0]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; hor_reg[1]                                                   ; hor_reg[1]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; hor_reg[9]                                                   ; hor_reg[9]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; count_value[15]                                              ; count_value[15]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
 ; 0.360 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
 ; 0.360 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[9]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
 ; 0.360 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[11]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
-; 0.361 ; ver_reg[0]                                                   ; ver_reg[0]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; ver_reg[2]                                                   ; ver_reg[2]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; count_value[1]                                               ; count_value[1]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; count_value[4]                                               ; count_value[4]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; count_value[17]                                              ; count_value[17]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; count_value[20]                                              ; count_value[20]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[7]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[13]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[14]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.363 ; count_value[11]                                              ; count_value[11]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; count_value[12]                                              ; count_value[12]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; count_value[14]                                              ; count_value[14]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; hor_reg[1]                                                   ; hor_reg[1]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; count_value[10]                                              ; count_value[10]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; count_value[24]                                              ; count_value[24]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; count_value[6]                                               ; count_value[6]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
 ; 0.365 ; hor_reg[2]                                                   ; hor_reg[2]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
-; 0.367 ; hor_reg[10]                                                  ; hor_reg[4]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.519      ;
+; 0.366 ; count_value[8]                                               ; count_value[8]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; count_value[22]                                              ; count_value[22]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; hor_reg[9]                                                   ; hor_reg[9]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.518      ;
 ; 0.368 ; hor_reg[7]                                                   ; hor_reg[7]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.520      ;
-; 0.369 ; uarttestTLE:uart|rxbytescounter[0]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.368 ; hor_reg[10]                                                  ; hor_reg[4]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; count_value[16]                                              ; count_value[16]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; count_value[21]                                              ; count_value[21]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; count_value[23]                                              ; count_value[23]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
 ; 0.371 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
 ; 0.371 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[8]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
 ; 0.371 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[10]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
-; 0.372 ; hor_reg[3]                                                   ; hor_reg[3]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; hor_reg[5]                                                   ; hor_reg[5]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.371 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; count_value[18]                                              ; count_value[18]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; count_value[19]                                              ; count_value[19]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; count_value[25]                                              ; count_value[25]                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.372 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.372 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[6]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.372 ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; uarttestTLE:uart|uarttest:uart1|clk50_cntr[12]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; ver_reg[8]                                                   ; ver_reg[8]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.525      ;
 ; 0.373 ; ver_reg[6]                                                   ; ver_reg[6]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.525      ;
-; 0.374 ; ver_reg[8]                                                   ; ver_reg[8]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.373 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374 ; hor_reg[3]                                                   ; hor_reg[3]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; ver_reg[0]                                                   ; ver_reg[0]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; hor_reg[5]                                                   ; hor_reg[5]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; hor_reg[6]                                                   ; hor_reg[6]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.527      ;
 ; 0.375 ; hor_reg[8]                                                   ; hor_reg[8]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.527      ;
-; 0.377 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.IDLE_STATE     ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STARTBIT_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.529      ;
-; 0.379 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[2]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.531      ;
-; 0.381 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.DATABITS_STATE ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.533      ;
-; 0.382 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.534      ;
-; 0.387 ; uarttestTLE:uart|uarttest:uart1|UART_Rx_State.STOPBITS_STATE ; uarttestTLE:uart|uarttest:uart1|rxfinished                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.539      ;
-; 0.408 ; uarttestTLE:uart|smallMem[30]                                ; uarttestTLE:uart|smallMem[38]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.560      ;
-; 0.410 ; uarttestTLE:uart|smallMem[27]                                ; uarttestTLE:uart|smallMem[35]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.562      ;
-; 0.415 ; uarttestTLE:uart|rxbytescounter[2]                           ; uarttestTLE:uart|rxbytescounter[3]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.567      ;
-; 0.418 ; ver_reg[9]                                                   ; ver_reg[9]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.570      ;
-; 0.420 ; uarttestTLE:uart|smallMem[1]                                 ; uarttestTLE:uart|smallMem[9]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.572      ;
-; 0.422 ; uarttestTLE:uart|smallMem[24]                                ; player_x[4][17][8]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.574      ;
-; 0.427 ; uarttestTLE:uart|smallMem[16]                                ; uarttestTLE:uart|smallMem[24]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.580      ;
-; 0.429 ; uarttestTLE:uart|smallMem[8]                                 ; player_y[4][21][8]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.581      ;
-; 0.431 ; uarttestTLE:uart|smallMem[3]                                 ; player_y[0][21][3]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.582      ;
-; 0.433 ; uarttestTLE:uart|smallMem[8]                                 ; player_y[9][21][8]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.585      ;
-; 0.434 ; uarttestTLE:uart|smallMem[5]                                 ; player_y[0][21][5]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.585      ;
-; 0.440 ; uarttestTLE:uart|smallMem[5]                                 ; player_y[7][21][5]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 0.589      ;
-; 0.443 ; uarttestTLE:uart|smallMem[38]                                ; ledsreg[6]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 0.590      ;
-; 0.443 ; uarttestTLE:uart|rxbytescounter[1]                           ; uarttestTLE:uart|rxbytescounter[0]                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.595      ;
-; 0.445 ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[0]               ; uarttestTLE:uart|uarttest:uart1|bitcount_rx[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.597      ;
-; 0.449 ; uarttestTLE:uart|smallMem[7]                                 ; player_y[7][21][7]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 0.598      ;
-; 0.449 ; uarttestTLE:uart|smallMem[7]                                 ; player_y[0][21][7]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.600      ;
-; 0.451 ; ver_reg[5]                                                   ; ver_reg[5]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.603      ;
-; 0.452 ; hor_reg[6]                                                   ; hor_reg[6]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.604      ;
-; 0.462 ; uarttestTLE:uart|uarttest:uart1|rx_data[1]                   ; uarttestTLE:uart|smallMem[1]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.615      ;
-; 0.463 ; uarttestTLE:uart|smallMem[20]                                ; player_x[9][10][4]                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.006     ; 0.609      ;
+; 0.376 ; count_value[0]                                               ; count_value[0]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; count_value[2]                                               ; count_value[2]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; count_value[3]                                               ; count_value[3]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; ver_reg[2]                                                   ; ver_reg[2]                                                   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; count_value[9]                                               ; count_value[9]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379 ; count_value[5]                                               ; count_value[5]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379 ; count_value[7]                                               ; count_value[7]                                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.531      ;
 +-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -940,8 +940,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; rst_n     ; CLOCK_50   ; 1.124 ; 1.124 ; Rise       ; CLOCK_50        ;
-; uart_rx_i ; CLOCK_50   ; 2.020 ; 2.020 ; Rise       ; CLOCK_50        ;
+; rst_n     ; CLOCK_50   ; 1.361 ; 1.361 ; Rise       ; CLOCK_50        ;
+; uart_rx_i ; CLOCK_50   ; 2.204 ; 2.204 ; Rise       ; CLOCK_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -950,8 +950,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; rst_n     ; CLOCK_50   ; 0.202  ; 0.202  ; Rise       ; CLOCK_50        ;
-; uart_rx_i ; CLOCK_50   ; -1.900 ; -1.900 ; Rise       ; CLOCK_50        ;
+; rst_n     ; CLOCK_50   ; 0.078  ; 0.078  ; Rise       ; CLOCK_50        ;
+; uart_rx_i ; CLOCK_50   ; -2.084 ; -2.084 ; Rise       ; CLOCK_50        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -960,20 +960,20 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LED[*]    ; CLOCK_50   ; 4.360 ; 4.360 ; Rise       ; CLOCK_50        ;
-;  LED[0]   ; CLOCK_50   ; 4.223 ; 4.223 ; Rise       ; CLOCK_50        ;
-;  LED[1]   ; CLOCK_50   ; 4.230 ; 4.230 ; Rise       ; CLOCK_50        ;
-;  LED[2]   ; CLOCK_50   ; 4.217 ; 4.217 ; Rise       ; CLOCK_50        ;
-;  LED[3]   ; CLOCK_50   ; 4.211 ; 4.211 ; Rise       ; CLOCK_50        ;
-;  LED[4]   ; CLOCK_50   ; 4.360 ; 4.360 ; Rise       ; CLOCK_50        ;
-;  LED[5]   ; CLOCK_50   ; 4.349 ; 4.349 ; Rise       ; CLOCK_50        ;
-;  LED[6]   ; CLOCK_50   ; 4.219 ; 4.219 ; Rise       ; CLOCK_50        ;
-;  LED[7]   ; CLOCK_50   ; 4.220 ; 4.220 ; Rise       ; CLOCK_50        ;
-; VGA_BLUE  ; CLOCK_50   ; 6.249 ; 6.249 ; Rise       ; CLOCK_50        ;
-; VGA_GREEN ; CLOCK_50   ; 6.244 ; 6.244 ; Rise       ; CLOCK_50        ;
-; VGA_HS    ; CLOCK_50   ; 4.425 ; 4.425 ; Rise       ; CLOCK_50        ;
-; VGA_RED   ; CLOCK_50   ; 6.742 ; 6.742 ; Rise       ; CLOCK_50        ;
-; VGA_VS    ; CLOCK_50   ; 3.929 ; 3.929 ; Rise       ; CLOCK_50        ;
+; LED[*]    ; CLOCK_50   ; 4.369 ; 4.369 ; Rise       ; CLOCK_50        ;
+;  LED[0]   ; CLOCK_50   ; 4.148 ; 4.148 ; Rise       ; CLOCK_50        ;
+;  LED[1]   ; CLOCK_50   ; 4.291 ; 4.291 ; Rise       ; CLOCK_50        ;
+;  LED[2]   ; CLOCK_50   ; 4.369 ; 4.369 ; Rise       ; CLOCK_50        ;
+;  LED[3]   ; CLOCK_50   ; 4.088 ; 4.088 ; Rise       ; CLOCK_50        ;
+;  LED[4]   ; CLOCK_50   ; 4.321 ; 4.321 ; Rise       ; CLOCK_50        ;
+;  LED[5]   ; CLOCK_50   ; 4.308 ; 4.308 ; Rise       ; CLOCK_50        ;
+;  LED[6]   ; CLOCK_50   ; 4.365 ; 4.365 ; Rise       ; CLOCK_50        ;
+;  LED[7]   ; CLOCK_50   ; 4.326 ; 4.326 ; Rise       ; CLOCK_50        ;
+; VGA_BLUE  ; CLOCK_50   ; 5.859 ; 5.859 ; Rise       ; CLOCK_50        ;
+; VGA_GREEN ; CLOCK_50   ; 6.317 ; 6.317 ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 3.924 ; 3.924 ; Rise       ; CLOCK_50        ;
+; VGA_RED   ; CLOCK_50   ; 5.858 ; 5.858 ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 4.294 ; 4.294 ; Rise       ; CLOCK_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -982,20 +982,20 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LED[*]    ; CLOCK_50   ; 4.211 ; 4.211 ; Rise       ; CLOCK_50        ;
-;  LED[0]   ; CLOCK_50   ; 4.223 ; 4.223 ; Rise       ; CLOCK_50        ;
-;  LED[1]   ; CLOCK_50   ; 4.230 ; 4.230 ; Rise       ; CLOCK_50        ;
-;  LED[2]   ; CLOCK_50   ; 4.217 ; 4.217 ; Rise       ; CLOCK_50        ;
-;  LED[3]   ; CLOCK_50   ; 4.211 ; 4.211 ; Rise       ; CLOCK_50        ;
-;  LED[4]   ; CLOCK_50   ; 4.360 ; 4.360 ; Rise       ; CLOCK_50        ;
-;  LED[5]   ; CLOCK_50   ; 4.349 ; 4.349 ; Rise       ; CLOCK_50        ;
-;  LED[6]   ; CLOCK_50   ; 4.219 ; 4.219 ; Rise       ; CLOCK_50        ;
-;  LED[7]   ; CLOCK_50   ; 4.220 ; 4.220 ; Rise       ; CLOCK_50        ;
-; VGA_BLUE  ; CLOCK_50   ; 5.127 ; 5.127 ; Rise       ; CLOCK_50        ;
-; VGA_GREEN ; CLOCK_50   ; 5.639 ; 5.639 ; Rise       ; CLOCK_50        ;
-; VGA_HS    ; CLOCK_50   ; 4.425 ; 4.425 ; Rise       ; CLOCK_50        ;
-; VGA_RED   ; CLOCK_50   ; 5.618 ; 5.618 ; Rise       ; CLOCK_50        ;
-; VGA_VS    ; CLOCK_50   ; 3.929 ; 3.929 ; Rise       ; CLOCK_50        ;
+; LED[*]    ; CLOCK_50   ; 4.088 ; 4.088 ; Rise       ; CLOCK_50        ;
+;  LED[0]   ; CLOCK_50   ; 4.148 ; 4.148 ; Rise       ; CLOCK_50        ;
+;  LED[1]   ; CLOCK_50   ; 4.291 ; 4.291 ; Rise       ; CLOCK_50        ;
+;  LED[2]   ; CLOCK_50   ; 4.369 ; 4.369 ; Rise       ; CLOCK_50        ;
+;  LED[3]   ; CLOCK_50   ; 4.088 ; 4.088 ; Rise       ; CLOCK_50        ;
+;  LED[4]   ; CLOCK_50   ; 4.321 ; 4.321 ; Rise       ; CLOCK_50        ;
+;  LED[5]   ; CLOCK_50   ; 4.308 ; 4.308 ; Rise       ; CLOCK_50        ;
+;  LED[6]   ; CLOCK_50   ; 4.365 ; 4.365 ; Rise       ; CLOCK_50        ;
+;  LED[7]   ; CLOCK_50   ; 4.326 ; 4.326 ; Rise       ; CLOCK_50        ;
+; VGA_BLUE  ; CLOCK_50   ; 4.947 ; 4.947 ; Rise       ; CLOCK_50        ;
+; VGA_GREEN ; CLOCK_50   ; 4.982 ; 4.982 ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 3.924 ; 3.924 ; Rise       ; CLOCK_50        ;
+; VGA_RED   ; CLOCK_50   ; 4.945 ; 4.945 ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 4.294 ; 4.294 ; Rise       ; CLOCK_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1004,7 +1004,7 @@ No paths to report.
 +------------+--------------+-------+----+----+-------+
 ; Input Port ; Output Port  ; RR    ; RF ; FR ; FF    ;
 +------------+--------------+-------+----+----+-------+
-; uart_rx_i  ; uart_rx_dump ; 5.279 ;    ;    ; 5.279 ;
+; uart_rx_i  ; uart_rx_dump ; 5.277 ;    ;    ; 5.277 ;
 +------------+--------------+-------+----+----+-------+
 
 
@@ -1013,7 +1013,7 @@ No paths to report.
 +------------+--------------+-------+----+----+-------+
 ; Input Port ; Output Port  ; RR    ; RF ; FR ; FF    ;
 +------------+--------------+-------+----+----+-------+
-; uart_rx_i  ; uart_rx_dump ; 5.279 ;    ;    ; 5.279 ;
+; uart_rx_i  ; uart_rx_dump ; 5.277 ;    ;    ; 5.277 ;
 +------------+--------------+-------+----+----+-------+
 
 
@@ -1022,10 +1022,10 @@ No paths to report.
 +------------------+------------+-------+----------+---------+---------------------+
 ; Clock            ; Setup      ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+------------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -6.660     ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-;  CLOCK_50        ; -6.660     ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-; Design-wide TNS  ; -11488.813 ; 0.0   ; 0.0      ; 0.0     ; -2687.587           ;
-;  CLOCK_50        ; -11488.813 ; 0.000 ; N/A      ; N/A     ; -2687.587           ;
+; Worst-case Slack ; -6.737     ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  CLOCK_50        ; -6.737     ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -11590.827 ; 0.0   ; 0.0      ; 0.0     ; -2724.247           ;
+;  CLOCK_50        ; -11590.827 ; 0.000 ; N/A      ; N/A     ; -2724.247           ;
 +------------------+------------+-------+----------+---------+---------------------+
 
 
@@ -1034,8 +1034,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; rst_n     ; CLOCK_50   ; 4.009 ; 4.009 ; Rise       ; CLOCK_50        ;
-; uart_rx_i ; CLOCK_50   ; 4.418 ; 4.418 ; Rise       ; CLOCK_50        ;
+; rst_n     ; CLOCK_50   ; 4.476 ; 4.476 ; Rise       ; CLOCK_50        ;
+; uart_rx_i ; CLOCK_50   ; 4.822 ; 4.822 ; Rise       ; CLOCK_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1044,8 +1044,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; rst_n     ; CLOCK_50   ; 0.202  ; 0.202  ; Rise       ; CLOCK_50        ;
-; uart_rx_i ; CLOCK_50   ; -1.900 ; -1.900 ; Rise       ; CLOCK_50        ;
+; rst_n     ; CLOCK_50   ; 0.078  ; 0.078  ; Rise       ; CLOCK_50        ;
+; uart_rx_i ; CLOCK_50   ; -2.084 ; -2.084 ; Rise       ; CLOCK_50        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1054,20 +1054,20 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; LED[*]    ; CLOCK_50   ; 8.454  ; 8.454  ; Rise       ; CLOCK_50        ;
-;  LED[0]   ; CLOCK_50   ; 8.117  ; 8.117  ; Rise       ; CLOCK_50        ;
-;  LED[1]   ; CLOCK_50   ; 8.136  ; 8.136  ; Rise       ; CLOCK_50        ;
-;  LED[2]   ; CLOCK_50   ; 8.111  ; 8.111  ; Rise       ; CLOCK_50        ;
-;  LED[3]   ; CLOCK_50   ; 8.097  ; 8.097  ; Rise       ; CLOCK_50        ;
-;  LED[4]   ; CLOCK_50   ; 8.454  ; 8.454  ; Rise       ; CLOCK_50        ;
-;  LED[5]   ; CLOCK_50   ; 8.436  ; 8.436  ; Rise       ; CLOCK_50        ;
-;  LED[6]   ; CLOCK_50   ; 8.099  ; 8.099  ; Rise       ; CLOCK_50        ;
-;  LED[7]   ; CLOCK_50   ; 8.102  ; 8.102  ; Rise       ; CLOCK_50        ;
-; VGA_BLUE  ; CLOCK_50   ; 13.317 ; 13.317 ; Rise       ; CLOCK_50        ;
-; VGA_GREEN ; CLOCK_50   ; 13.287 ; 13.287 ; Rise       ; CLOCK_50        ;
-; VGA_HS    ; CLOCK_50   ; 8.420  ; 8.420  ; Rise       ; CLOCK_50        ;
-; VGA_RED   ; CLOCK_50   ; 14.742 ; 14.742 ; Rise       ; CLOCK_50        ;
-; VGA_VS    ; CLOCK_50   ; 7.278  ; 7.278  ; Rise       ; CLOCK_50        ;
+; LED[*]    ; CLOCK_50   ; 8.503  ; 8.503  ; Rise       ; CLOCK_50        ;
+;  LED[0]   ; CLOCK_50   ; 7.988  ; 7.988  ; Rise       ; CLOCK_50        ;
+;  LED[1]   ; CLOCK_50   ; 8.263  ; 8.263  ; Rise       ; CLOCK_50        ;
+;  LED[2]   ; CLOCK_50   ; 8.503  ; 8.503  ; Rise       ; CLOCK_50        ;
+;  LED[3]   ; CLOCK_50   ; 7.723  ; 7.723  ; Rise       ; CLOCK_50        ;
+;  LED[4]   ; CLOCK_50   ; 8.316  ; 8.316  ; Rise       ; CLOCK_50        ;
+;  LED[5]   ; CLOCK_50   ; 8.253  ; 8.253  ; Rise       ; CLOCK_50        ;
+;  LED[6]   ; CLOCK_50   ; 8.451  ; 8.451  ; Rise       ; CLOCK_50        ;
+;  LED[7]   ; CLOCK_50   ; 8.389  ; 8.389  ; Rise       ; CLOCK_50        ;
+; VGA_BLUE  ; CLOCK_50   ; 12.439 ; 12.439 ; Rise       ; CLOCK_50        ;
+; VGA_GREEN ; CLOCK_50   ; 13.634 ; 13.634 ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 7.266  ; 7.266  ; Rise       ; CLOCK_50        ;
+; VGA_RED   ; CLOCK_50   ; 12.429 ; 12.429 ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 8.210  ; 8.210  ; Rise       ; CLOCK_50        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1076,20 +1076,20 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LED[*]    ; CLOCK_50   ; 4.211 ; 4.211 ; Rise       ; CLOCK_50        ;
-;  LED[0]   ; CLOCK_50   ; 4.223 ; 4.223 ; Rise       ; CLOCK_50        ;
-;  LED[1]   ; CLOCK_50   ; 4.230 ; 4.230 ; Rise       ; CLOCK_50        ;
-;  LED[2]   ; CLOCK_50   ; 4.217 ; 4.217 ; Rise       ; CLOCK_50        ;
-;  LED[3]   ; CLOCK_50   ; 4.211 ; 4.211 ; Rise       ; CLOCK_50        ;
-;  LED[4]   ; CLOCK_50   ; 4.360 ; 4.360 ; Rise       ; CLOCK_50        ;
-;  LED[5]   ; CLOCK_50   ; 4.349 ; 4.349 ; Rise       ; CLOCK_50        ;
-;  LED[6]   ; CLOCK_50   ; 4.219 ; 4.219 ; Rise       ; CLOCK_50        ;
-;  LED[7]   ; CLOCK_50   ; 4.220 ; 4.220 ; Rise       ; CLOCK_50        ;
-; VGA_BLUE  ; CLOCK_50   ; 5.127 ; 5.127 ; Rise       ; CLOCK_50        ;
-; VGA_GREEN ; CLOCK_50   ; 5.639 ; 5.639 ; Rise       ; CLOCK_50        ;
-; VGA_HS    ; CLOCK_50   ; 4.425 ; 4.425 ; Rise       ; CLOCK_50        ;
-; VGA_RED   ; CLOCK_50   ; 5.618 ; 5.618 ; Rise       ; CLOCK_50        ;
-; VGA_VS    ; CLOCK_50   ; 3.929 ; 3.929 ; Rise       ; CLOCK_50        ;
+; LED[*]    ; CLOCK_50   ; 4.088 ; 4.088 ; Rise       ; CLOCK_50        ;
+;  LED[0]   ; CLOCK_50   ; 4.148 ; 4.148 ; Rise       ; CLOCK_50        ;
+;  LED[1]   ; CLOCK_50   ; 4.291 ; 4.291 ; Rise       ; CLOCK_50        ;
+;  LED[2]   ; CLOCK_50   ; 4.369 ; 4.369 ; Rise       ; CLOCK_50        ;
+;  LED[3]   ; CLOCK_50   ; 4.088 ; 4.088 ; Rise       ; CLOCK_50        ;
+;  LED[4]   ; CLOCK_50   ; 4.321 ; 4.321 ; Rise       ; CLOCK_50        ;
+;  LED[5]   ; CLOCK_50   ; 4.308 ; 4.308 ; Rise       ; CLOCK_50        ;
+;  LED[6]   ; CLOCK_50   ; 4.365 ; 4.365 ; Rise       ; CLOCK_50        ;
+;  LED[7]   ; CLOCK_50   ; 4.326 ; 4.326 ; Rise       ; CLOCK_50        ;
+; VGA_BLUE  ; CLOCK_50   ; 4.947 ; 4.947 ; Rise       ; CLOCK_50        ;
+; VGA_GREEN ; CLOCK_50   ; 4.982 ; 4.982 ; Rise       ; CLOCK_50        ;
+; VGA_HS    ; CLOCK_50   ; 3.924 ; 3.924 ; Rise       ; CLOCK_50        ;
+; VGA_RED   ; CLOCK_50   ; 4.945 ; 4.945 ; Rise       ; CLOCK_50        ;
+; VGA_VS    ; CLOCK_50   ; 4.294 ; 4.294 ; Rise       ; CLOCK_50        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1098,7 +1098,7 @@ No paths to report.
 +------------+--------------+--------+----+----+--------+
 ; Input Port ; Output Port  ; RR     ; RF ; FR ; FF     ;
 +------------+--------------+--------+----+----+--------+
-; uart_rx_i  ; uart_rx_dump ; 10.144 ;    ;    ; 10.144 ;
+; uart_rx_i  ; uart_rx_dump ; 10.021 ;    ;    ; 10.021 ;
 +------------+--------------+--------+----+----+--------+
 
 
@@ -1107,7 +1107,7 @@ No paths to report.
 +------------+--------------+-------+----+----+-------+
 ; Input Port ; Output Port  ; RR    ; RF ; FR ; FF    ;
 +------------+--------------+-------+----+----+-------+
-; uart_rx_i  ; uart_rx_dump ; 5.279 ;    ;    ; 5.279 ;
+; uart_rx_i  ; uart_rx_dump ; 5.277 ;    ;    ; 5.277 ;
 +------------+--------------+-------+----+----+-------+
 
 
@@ -1116,7 +1116,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 127804   ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 129382   ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1126,7 +1126,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 127804   ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 129382   ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1151,9 +1151,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 2153  ; 2153 ;
+; Unconstrained Input Port Paths  ; 2183  ; 2183 ;
 ; Unconstrained Output Ports      ; 14    ; 14   ;
-; Unconstrained Output Port Paths ; 66    ; 66   ;
+; Unconstrained Output Port Paths ; 68    ; 68   ;
 +---------------------------------+-------+------+
 
 
@@ -1163,7 +1163,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Aug 24 12:08:31 2019
+    Info: Processing started: Sat Aug 24 13:38:22 2019
 Info: Command: quartus_sta game_display -c game_display
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1176,10 +1176,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -6.660
+Info (332146): Worst-case setup slack is -6.737
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -6.660    -11488.813 CLOCK_50 
+    Info (332119):    -6.737    -11590.827 CLOCK_50 
 Info (332146): Worst-case hold slack is 0.445
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1189,14 +1189,14 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.631
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.631     -2687.587 CLOCK_50 
+    Info (332119):    -1.631     -2724.247 CLOCK_50 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.903
+Info (332146): Worst-case setup slack is -2.012
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.903     -3268.287 CLOCK_50 
+    Info (332119):    -2.012     -3244.563 CLOCK_50 
 Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1206,14 +1206,14 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.380     -2199.380 CLOCK_50 
+    Info (332119):    -1.380     -2229.380 CLOCK_50 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4614 megabytes
-    Info: Processing ended: Sat Aug 24 12:08:34 2019
+    Info: Peak virtual memory: 4601 megabytes
+    Info: Processing ended: Sat Aug 24 13:38:25 2019
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
