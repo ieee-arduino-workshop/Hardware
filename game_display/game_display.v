@@ -374,58 +374,199 @@ generate
 				if (~rst_n)
 					begin	
 					
-						//x pixels
-						//row 1
-						player_x[i][j]   <=  ARN_CX+2*_1_YARD+(8*i);
-						player_x[i][j+1] <=  ARN_CX+2*_1_YARD+1+(8*i);
-						player_x[i][j+2] <=  ARN_CX+2*_1_YARD+2+(8*i);
-						player_x[i][j+3] <=  ARN_CX+2*_1_YARD+3+(8*i);
-						
-						//row 2
-						player_x[i][j+4]   <=  ARN_CX+2*_1_YARD+(8*i);
-						player_x[i][j+5] <=  ARN_CX+2*_1_YARD+1+(8*i);
-						player_x[i][j+6] <=  ARN_CX+2*_1_YARD+2+(8*i);
-						player_x[i][j+7] <=  ARN_CX+2*_1_YARD+3+(8*i);
+					
+						//this is 7x7 pixels for players
+								
+								//x pixels
 
-						//row 3
-						player_x[i][j+8]   <=  ARN_CX+2*_1_YARD+(8*i);
-						player_x[i][j+9] <=  ARN_CX+2*_1_YARD+1+(8*i);
-						player_x[i][j+10] <=  ARN_CX+2*_1_YARD+2+(8*i);
-						player_x[i][j+11] <=  ARN_CX+2*_1_YARD+3+(8*i);
-						
-						//row 4
-						player_x[i][j+12]   <=  ARN_CX+2*_1_YARD+(8*i);
-						player_x[i][j+13] <=  ARN_CX+2*_1_YARD+1+(8*i);
-						player_x[i][j+14] <=  ARN_CX+2*_1_YARD+2+(8*i);
-						player_x[i][j+15] <=  ARN_CX+2*_1_YARD+3+(8*i);					
-						//end of x pixels
-						
-						
-						
-						//y pixels
-						//row 1
-						player_y[i][j]   <= #0.5 ARN_CY-2;
-						player_y[i][j+1] <= #0.5 ARN_CY-2;
-						player_y[i][j+2] <= #0.5 ARN_CY-2;
-						player_y[i][j+3] <= #0.5 ARN_CY-2;
-						
-						//row 2
-						player_y[i][j+4]   <= #0.5 ARN_CY-1;
-						player_y[i][j+5] <= #0.5 ARN_CY-1;
-						player_y[i][j+6] <= #0.5 ARN_CY-1;
-						player_y[i][j+7] <= #0.5 ARN_CY-1;
-						
-						//row 3
-						player_y[i][j+8]   <= #0.5  ARN_CY;
-						player_y[i][j+9] <= #0.5  ARN_CY;
-						player_y[i][j+10] <= #0.5  ARN_CY;
-						player_y[i][j+11] <= #0.5  ARN_CY;
-						
-						//row 4
-						player_y[i][j+12]   <= #0.5 ARN_CY+1;
-						player_y[i][j+13] <= #0.5 ARN_CY+1;
-						player_y[i][j+14] <= #0.5 ARN_CY+1;
-						player_y[i][j+15] <= #0.5 ARN_CY+1;
+								//row 1
+								player_x[i][j]   <= 0;
+								player_x[i][j+1] <=  0;
+								player_x[i][j+2] <=  0;
+								player_x[i][j+3] <= 0;
+								player_x[i][j+4] <=  0;
+								player_x[i][j+5] <=  0;
+								player_x[i][j+6] <=  0;								
+								
+								
+								//row 2
+								player_x[i][j+7]   <= 0;
+								player_x[i][j+8] <=   0;
+								player_x[i][j+9] <=   0;
+								player_x[i][j+10] <=  0;
+								player_x[i][j+11] <=  0;
+								player_x[i][j+12] <=  0;
+								player_x[i][j+13] <=  0;
+								
+								//row 3
+								player_x[i][j+14]   <= 0 ;
+								player_x[i][j+15] <=  0;
+								player_x[i][j+16] <=  0;
+								player_x[i][j+17] <= 0;
+								player_x[i][j+18] <=  0;
+								player_x[i][j+19] <=  0;
+								player_x[i][j+20] <=  0;
+								
+								
+								//row 4
+								player_x[i][j+21]   <= 0 ;
+								player_x[i][j+22] <=  0;
+								player_x[i][j+23] <=  0;
+								player_x[i][j+24] <=  0;
+								player_x[i][j+25] <=  0;
+								player_x[i][j+26] <=  0;
+								player_x[i][j+27] <=  0;
+								
+								//row 5
+								player_x[i][j+28]   <= 0;
+								player_x[i][j+29] <=  0;
+								player_x[i][j+30] <=  0;
+								player_x[i][j+31] <=  0;
+								player_x[i][j+32] <=  0;
+								player_x[i][j+33] <=  0;
+								player_x[i][j+34] <=  0;
+								
+								//row 6
+								player_x[i][j+35]   <= 0 ;
+								player_x[i][j+36] <=  0;
+								player_x[i][j+37] <=  0;
+								player_x[i][j+38] <=  0;
+								player_x[i][j+39] <=  0;
+								player_x[i][j+40] <=  0;
+								player_x[i][j+41] <=  0;
+								
+								//row 7
+								player_x[i][j+42]   <= 0;
+								player_x[i][j+43] <=  0;
+								player_x[i][j+44] <=  0;
+								player_x[i][j+45] <=  0;
+								player_x[i][j+46] <=  0;
+								player_x[i][j+47] <=  0;
+								player_x[i][j+48] <=  0;
+								
+								
+								
+								//y-pixels
+								
+								//col 1
+								player_y[i][j] <=  0;
+								player_y[i][j+1] <=  0;
+								player_y[i][j+2] <=  0;
+								player_y[i][j+3] <=  0;
+								player_y[i][j+4] <=  0;
+								player_y[i][j+5] <=  0;
+								player_y[i][j+6] <=  0;								
+								
+								
+								//col 2
+								player_y[i][j+7]   <= 0;
+								player_y[i][j+8]  <=  0;
+								player_y[i][j+9]  <=  0;
+								player_y[i][j+10] <=  0;
+								player_y[i][j+11] <=  0;
+								player_y[i][j+12] <=  0;
+								player_y[i][j+13] <=  0;
+								
+								//col 3
+								player_y[i][j+14]   <= 0;
+								player_y[i][j+15] <=  0;
+								player_y[i][j+16] <=  0;
+								player_y[i][j+17] <=  0;
+								player_y[i][j+18] <=  0;
+								player_y[i][j+19] <=  0;
+								player_y[i][j+20] <=  0;
+								
+								
+								//col 4
+								player_y[i][j+21]   <= 0;
+								player_y[i][j+22] <=  0;
+								player_y[i][j+23] <=  0;
+								player_y[i][j+24] <=  0;
+								player_y[i][j+25] <=  0;
+								player_y[i][j+26] <=  0;
+								player_y[i][j+27] <=  0;
+								
+								//col 5
+								player_y[i][j+28]   <= 0;
+								player_y[i][j+29] <=  0;
+								player_y[i][j+30] <=  0;
+								player_y[i][j+31] <=  0;
+								player_y[i][j+32] <=  0;
+								player_y[i][j+33] <=  0;
+								player_y[i][j+34] <=  0;
+								
+								//col 6
+								player_y[i][j+35]   <= 0;
+								player_y[i][j+36] <=  0;
+								player_y[i][j+37] <=  0;
+								player_y[i][j+38] <=  0;
+								player_y[i][j+39] <=  0;
+								player_y[i][j+40] <=  0;
+								player_y[i][j+41] <=  0;
+								
+								//col 7
+								player_y[i][j+42]   <= 0;
+								player_y[i][j+43] <=  0;
+								player_y[i][j+44] <=  0;
+								player_y[i][j+45] <=  0;
+								player_y[i][j+46] <=  0;
+								player_y[i][j+47] <=  0;
+								player_y[i][j+48] <=  0;
+					
+					
+					
+//						//x pixels
+//						//row 1
+//						player_x[i][j]   <=  ARN_CX+2*_1_YARD+(8*i);
+//						player_x[i][j+1] <=  ARN_CX+2*_1_YARD+1+(8*i);
+//						player_x[i][j+2] <=  ARN_CX+2*_1_YARD+2+(8*i);
+//						player_x[i][j+3] <=  ARN_CX+2*_1_YARD+3+(8*i);
+//						
+//						//row 2
+//						player_x[i][j+4]   <=  ARN_CX+2*_1_YARD+(8*i);
+//						player_x[i][j+5] <=  ARN_CX+2*_1_YARD+1+(8*i);
+//						player_x[i][j+6] <=  ARN_CX+2*_1_YARD+2+(8*i);
+//						player_x[i][j+7] <=  ARN_CX+2*_1_YARD+3+(8*i);
+//
+//						//row 3
+//						player_x[i][j+8]   <=  ARN_CX+2*_1_YARD+(8*i);
+//						player_x[i][j+9] <=  ARN_CX+2*_1_YARD+1+(8*i);
+//						player_x[i][j+10] <=  ARN_CX+2*_1_YARD+2+(8*i);
+//						player_x[i][j+11] <=  ARN_CX+2*_1_YARD+3+(8*i);
+//						
+//						//row 4
+//						player_x[i][j+12]   <=  ARN_CX+2*_1_YARD+(8*i);
+//						player_x[i][j+13] <=  ARN_CX+2*_1_YARD+1+(8*i);
+//						player_x[i][j+14] <=  ARN_CX+2*_1_YARD+2+(8*i);
+//						player_x[i][j+15] <=  ARN_CX+2*_1_YARD+3+(8*i);					
+//						//end of x pixels
+//						
+//						
+//						
+//						//y pixels
+//						//row 1
+//						player_y[i][j]   <= #0.5 ARN_CY-2;
+//						player_y[i][j+1] <= #0.5 ARN_CY-2;
+//						player_y[i][j+2] <= #0.5 ARN_CY-2;
+//						player_y[i][j+3] <= #0.5 ARN_CY-2;
+//						
+//						//row 2
+//						player_y[i][j+4]   <= #0.5 ARN_CY-1;
+//						player_y[i][j+5] <= #0.5 ARN_CY-1;
+//						player_y[i][j+6] <= #0.5 ARN_CY-1;
+//						player_y[i][j+7] <= #0.5 ARN_CY-1;
+//						
+//						//row 3
+//						player_y[i][j+8]   <= #0.5  ARN_CY;
+//						player_y[i][j+9] <= #0.5  ARN_CY;
+//						player_y[i][j+10] <= #0.5  ARN_CY;
+//						player_y[i][j+11] <= #0.5  ARN_CY;
+//						
+//						//row 4
+//						player_y[i][j+12]   <= #0.5 ARN_CY+1;
+//						player_y[i][j+13] <= #0.5 ARN_CY+1;
+//						player_y[i][j+14] <= #0.5 ARN_CY+1;
+//						player_y[i][j+15] <= #0.5 ARN_CY+1;
 						//end of y pixels
 						
 					end
