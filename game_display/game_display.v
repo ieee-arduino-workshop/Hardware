@@ -116,7 +116,7 @@ module game_display
 	reg flash_boarders;
 	
 	reg [25:0] count_value;
-	reg [2:0] flash_count;
+	reg [3:0] flash_count;
  
 	//2Hz symmetric square wave by default
 	parameter fullNCycles = 26'd5000000;
@@ -878,7 +878,7 @@ begin
 	end
 	else if (CLOCK_50==1'b1)
 	begin
-		if(flash_count<6)
+		if(flash_count<10)
 		begin
 			if(count_value == (fullNCycles-1'b1))
 				begin
