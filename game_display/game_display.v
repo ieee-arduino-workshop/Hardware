@@ -118,8 +118,11 @@ module game_display
 	reg disp_ball;
 
 
-   reg [9:0]player_x[9:0][15:0];
-   reg [9:0]player_y[9:0][15:0];
+ //  reg [9:0]player_x[9:0][15:0];
+ //  reg [9:0]player_y[9:0][15:0];
+ 
+	reg [9:0]player_x[9:0][48:0]; //players are 7x7 pixels
+	reg [9:0]player_y[9:0][48:0]; //players are 7x7 pixels
 	
 	reg [9:0]ball_x[15:0];
 	reg [9:0]ball_y[15:0];
@@ -425,59 +428,202 @@ generate
 							begin
 								if(i==(elementID-1))
 								begin
-									//x pixels
-									//row 1
-									player_x[i][0]   <= x_pos-2 ;
-									player_x[i][1] <=  x_pos-1;
-									player_x[i][2] <=  x_pos;
-									player_x[i][3] <=  x_pos+1;
-									
-									//row 2
-									player_x[i][4]   <= x_pos-2 ;
-									player_x[i][5] <=  x_pos-1;
-									player_x[i][6] <=  x_pos;
-									player_x[i][7] <=  x_pos+1;
+								
+								//this is 7x7 pixels for players
+								
+								//x pixels
 
-									//row 3
-									player_x[i][8]   <= x_pos-2 ;
-									player_x[i][9] <=  x_pos-1;
-									player_x[i][10] <=  x_pos;
-									player_x[i][11] <=  x_pos+1;
-									
-									//row 4
-									player_x[i][12]   <= x_pos-2 ;
-									player_x[i][13] <=  x_pos-1;
-									player_x[i][14] <=  x_pos;
-									player_x[i][15] <=  x_pos+1;				
-									//end of x pixels
-									
-									
-									
-									//y pixels
-									//row 1
-									player_y[i][0]   <= #0.5 y_pos-2;
-									player_y[i][1] <= #0.5 y_pos-2;
-									player_y[i][2] <= #0.5 y_pos-2;
-									player_y[i][3] <= #0.5 y_pos-2;
-									
-									//row 2
-									player_y[i][4]   <= #0.5 y_pos-1;
-									player_y[i][5] <= #0.5 y_pos-1;
-									player_y[i][6] <= #0.5 y_pos-1;
-									player_y[i][7] <= #0.5 y_pos-1;
-									
-									//row 3
-									player_y[i][8]   <= #0.5  y_pos;
-									player_y[i][9] <= #0.5  y_pos;
-									player_y[i][10] <= #0.5  y_pos;
-									player_y[i][11] <= #0.5  y_pos;
-									
-									//row 4
-									player_y[i][12]   <= #0.5 y_pos+1;
-									player_y[i][13] <= #0.5 y_pos+1;
-									player_y[i][14] <= #0.5 y_pos+1;
-									player_y[i][15] <= #0.5 y_pos+1;
-									//end of y pixels
+								//row 1
+								player_x[i][0]   <= x_pos-3 ;
+								player_x[i][1] <=  x_pos-2;
+								player_x[i][2] <=  x_pos-1;
+								player_x[i][3] <=  x_pos;
+								player_x[i][4] <=  x_pos+1;
+								player_x[i][5] <=  x_pos+2;
+								player_x[i][6] <=  x_pos+3;								
+								
+								
+								//row 2
+								player_x[i][7]   <= x_pos-3 ;
+								player_x[i][8] <=  x_pos-2;
+								player_x[i][9] <=  x_pos-1;
+								player_x[i][10] <=  x_pos;
+								player_x[i][11] <=  x_pos+1;
+								player_x[i][12] <=  x_pos+2;
+								player_x[i][13] <=  x_pos+3;
+								
+								//row 3
+								player_x[i][14]   <= x_pos-3 ;
+								player_x[i][15] <=  x_pos-2;
+								player_x[i][16] <=  x_pos-1;
+								player_x[i][17] <=  x_pos;
+								player_x[i][18] <=  x_pos+1;
+								player_x[i][19] <=  x_pos+2;
+								player_x[i][20] <=  x_pos+3;
+								
+								
+								//row 4
+								player_x[i][21]   <= x_pos-3 ;
+								player_x[i][22] <=  x_pos-2;
+								player_x[i][23] <=  x_pos-1;
+								player_x[i][24] <=  x_pos;
+								player_x[i][25] <=  x_pos+1;
+								player_x[i][26] <=  x_pos+2;
+								player_x[i][27] <=  x_pos+3;
+								
+								//row 5
+								player_x[i][28]   <= x_pos-3 ;
+								player_x[i][29] <=  x_pos-2;
+								player_x[i][30] <=  x_pos-1;
+								player_x[i][31] <=  x_pos;
+								player_x[i][32] <=  x_pos+1;
+								player_x[i][33] <=  x_pos+2;
+								player_x[i][34] <=  x_pos+3;
+								
+								//row 6
+								player_x[i][35]   <= x_pos-3 ;
+								player_x[i][36] <=  x_pos-2;
+								player_x[i][37] <=  x_pos-1;
+								player_x[i][38] <=  x_pos;
+								player_x[i][39] <=  x_pos+1;
+								player_x[i][40] <=  x_pos+2;
+								player_x[i][41] <=  x_pos+3;
+								
+								//row 7
+								player_x[i][42]   <= x_pos-3;
+								player_x[i][43] <=  x_pos-2;
+								player_x[i][44] <=  x_pos-1;
+								player_x[i][45] <=  x_pos;
+								player_x[i][46] <=  x_pos+1;
+								player_x[i][47] <=  x_pos+2;
+								player_x[i][48] <=  x_pos+3;
+								
+								
+								
+								//y-pixels
+								
+								//col 1
+								player_y[i][0] <=  y_pos-3;
+								player_y[i][1] <=  y_pos-3;
+								player_y[i][2] <=  y_pos-3;
+								player_y[i][3] <=  y_pos-3;
+								player_y[i][4] <=  y_pos-3;
+								player_y[i][5] <=  y_pos-3;
+								player_y[i][6] <=  y_pos-3;								
+								
+								
+								//col 2
+								player_y[i][7]   <= y_pos-2;
+								player_y[i][8]  <=  y_pos-2;
+								player_y[i][9]  <=  y_pos-2;
+								player_y[i][10] <=  y_pos-2;
+								player_y[i][11] <=  y_pos-2;
+								player_y[i][12] <=  y_pos-2;
+								player_y[i][13] <=  y_pos-2;
+								
+								//col 3
+								player_y[i][14]   <= y_pos-1;
+								player_y[i][15] <=  y_pos-1;
+								player_y[i][16] <=  y_pos-1;
+								player_y[i][17] <=  y_pos-1;
+								player_y[i][18] <=  y_pos-1;
+								player_y[i][19] <=  y_pos-1;
+								player_y[i][20] <=  y_pos-1;
+								
+								
+								//col 4
+								player_y[i][21]   <= y_pos;
+								player_y[i][22] <=  y_pos;
+								player_y[i][23] <=  y_pos;
+								player_y[i][24] <=  y_pos;
+								player_y[i][25] <=  y_pos;
+								player_y[i][26] <=  y_pos;
+								player_y[i][27] <=  y_pos;
+								
+								//col 5
+								player_y[i][28]   <= y_pos+1;
+								player_y[i][29] <=  y_pos+1;
+								player_y[i][30] <=  y_pos+1;
+								player_y[i][31] <=  y_pos+1;
+								player_y[i][32] <=  y_pos+1;
+								player_y[i][33] <=  y_pos+1;
+								player_y[i][34] <=  y_pos+1;
+								
+								//col 6
+								player_y[i][35]   <= y_pos+2;
+								player_y[i][36] <=  y_pos+2;
+								player_y[i][37] <=  y_pos+2;
+								player_y[i][38] <=  y_pos+2;
+								player_y[i][39] <=  y_pos+2;
+								player_y[i][40] <=  y_pos+2;
+								player_y[i][41] <=  y_pos+2;
+								
+								//col 7
+								player_y[i][42]   <= y_pos+3;
+								player_y[i][43] <=  y_pos+3;
+								player_y[i][44] <=  y_pos+3;
+								player_y[i][45] <=  y_pos+3;
+								player_y[i][46] <=  y_pos+3;
+								player_y[i][47] <=  y_pos+3;
+								player_y[i][48] <=  y_pos+3;
+								
+								
+								
+								//this is 4x4 pixels for players
+//									//x pixels
+//									//row 1
+//									player_x[i][0]   <= x_pos-2 ;
+//									player_x[i][1] <=  x_pos-1;
+//									player_x[i][2] <=  x_pos;
+//									player_x[i][3] <=  x_pos+1;
+//									
+//									
+//									//row 2
+//									player_x[i][4]   <= x_pos-2 ;
+//									player_x[i][5] <=  x_pos-1;
+//									player_x[i][6] <=  x_pos;
+//									player_x[i][7] <=  x_pos+1;
+//
+//									//row 3
+//									player_x[i][8]   <= x_pos-2 ;
+//									player_x[i][9] <=  x_pos-1;
+//									player_x[i][10] <=  x_pos;
+//									player_x[i][11] <=  x_pos+1;
+//									
+//									//row 4
+//									player_x[i][12]   <= x_pos-2 ;
+//									player_x[i][13] <=  x_pos-1;
+//									player_x[i][14] <=  x_pos;
+//									player_x[i][15] <=  x_pos+1;			
+//									//end of x pixels
+//									
+//									
+//									
+//									//y pixels
+//									//row 1
+//									player_y[i][0]   <= #0.5 y_pos-2;
+//									player_y[i][1] <= #0.5 y_pos-2;
+//									player_y[i][2] <= #0.5 y_pos-2;
+//									player_y[i][3] <= #0.5 y_pos-2;
+//									
+//									//row 2
+//									player_y[i][4]   <= #0.5 y_pos-1;
+//									player_y[i][5] <= #0.5 y_pos-1;
+//									player_y[i][6] <= #0.5 y_pos-1;
+//									player_y[i][7] <= #0.5 y_pos-1;
+//									
+//									//row 3
+//									player_y[i][8]   <= #0.5  y_pos;
+//									player_y[i][9] <= #0.5  y_pos;
+//									player_y[i][10] <= #0.5  y_pos;
+//									player_y[i][11] <= #0.5  y_pos;
+//									
+//									//row 4
+//									player_y[i][12]   <= #0.5 y_pos+1;
+//									player_y[i][13] <= #0.5 y_pos+1;
+//									player_y[i][14] <= #0.5 y_pos+1;
+//									player_y[i][15] <= #0.5 y_pos+1;
+//									//end of y pixels
 								end
 							end
 						end
@@ -493,22 +639,58 @@ generate
 			disp_player[i] <= ((hor_reg == player_x[i][0]) & (ver_reg == player_y[i][0]))|
 									((hor_reg == player_x[i][1]) & (ver_reg == player_y[i][1]))|
 									((hor_reg == player_x[i][2]) & (ver_reg == player_y[i][2]))|
-									((hor_reg == player_x[i][3]) & (ver_reg == player_y[i][3]))|
-									
+									((hor_reg == player_x[i][3]) & (ver_reg == player_y[i][3]))|													
 									((hor_reg == player_x[i][4]) & (ver_reg == player_y[i][4]))|
 									((hor_reg == player_x[i][5]) & (ver_reg == player_y[i][5]))|
 									((hor_reg == player_x[i][6]) & (ver_reg == player_y[i][6]))|
-									((hor_reg == player_x[i][7]) & (ver_reg == player_y[i][7]))|
 									
+									((hor_reg == player_x[i][7]) & (ver_reg == player_y[i][7]))|		
 									((hor_reg == player_x[i][8]) & (ver_reg == player_y[i][8]))|
 									((hor_reg == player_x[i][9]) & (ver_reg == player_y[i][9]))|
 									((hor_reg == player_x[i][10]) & (ver_reg == player_y[i][10]))|
-									((hor_reg == player_x[i][11]) & (ver_reg == player_y[i][11]))|
-									
+									((hor_reg == player_x[i][11]) & (ver_reg == player_y[i][11]))|									
 									((hor_reg == player_x[i][12]) & (ver_reg == player_y[i][12]))|
 									((hor_reg == player_x[i][13]) & (ver_reg == player_y[i][13]))|
+									
 									((hor_reg == player_x[i][14]) & (ver_reg == player_y[i][14]))|
-									((hor_reg == player_x[i][15]) & (ver_reg == player_y[i][15]));
+									((hor_reg == player_x[i][15]) & (ver_reg == player_y[i][15]))|
+									((hor_reg == player_x[i][16]) & (ver_reg == player_y[i][16]))|
+									((hor_reg == player_x[i][17]) & (ver_reg == player_y[i][17]))|
+									((hor_reg == player_x[i][18]) & (ver_reg == player_y[i][18]))|
+									((hor_reg == player_x[i][19]) & (ver_reg == player_y[i][19]))|
+									((hor_reg == player_x[i][20]) & (ver_reg == player_y[i][20]))|
+															
+									((hor_reg == player_x[i][21]) & (ver_reg == player_y[i][21]))|
+									((hor_reg == player_x[i][22]) & (ver_reg == player_y[i][22]))|
+									((hor_reg == player_x[i][23]) & (ver_reg == player_y[i][23]))|
+									((hor_reg == player_x[i][24]) & (ver_reg == player_y[i][24]))|													
+									((hor_reg == player_x[i][25]) & (ver_reg == player_y[i][25]))|
+									((hor_reg == player_x[i][26]) & (ver_reg == player_y[i][26]))|
+									((hor_reg == player_x[i][27]) & (ver_reg == player_y[i][27]))|
+									
+									((hor_reg == player_x[i][28]) & (ver_reg == player_y[i][28]))|		
+									((hor_reg == player_x[i][29]) & (ver_reg == player_y[i][29]))|
+									((hor_reg == player_x[i][30]) & (ver_reg == player_y[i][30]))|
+									((hor_reg == player_x[i][31]) & (ver_reg == player_y[i][31]))|
+									((hor_reg == player_x[i][32]) & (ver_reg == player_y[i][32]))|									
+									((hor_reg == player_x[i][33]) & (ver_reg == player_y[i][33]))|
+									((hor_reg == player_x[i][34]) & (ver_reg == player_y[i][34]))|
+									
+									((hor_reg == player_x[i][35]) & (ver_reg == player_y[i][35]))|
+									((hor_reg == player_x[i][36]) & (ver_reg == player_y[i][36]))|
+									((hor_reg == player_x[i][37]) & (ver_reg == player_y[i][37]))|
+									((hor_reg == player_x[i][38]) & (ver_reg == player_y[i][38]))|
+									((hor_reg == player_x[i][39]) & (ver_reg == player_y[i][39]))|
+									((hor_reg == player_x[i][40]) & (ver_reg == player_y[i][40]))|
+									((hor_reg == player_x[i][41]) & (ver_reg == player_y[i][41]))|
+									
+									((hor_reg == player_x[i][42]) & (ver_reg == player_y[i][42]))|
+									((hor_reg == player_x[i][43]) & (ver_reg == player_y[i][43]))|
+									((hor_reg == player_x[i][44]) & (ver_reg == player_y[i][44]))|
+									((hor_reg == player_x[i][45]) & (ver_reg == player_y[i][45]))|
+									((hor_reg == player_x[i][46]) & (ver_reg == player_y[i][46]))|
+									((hor_reg == player_x[i][47]) & (ver_reg == player_y[i][47]))|
+									((hor_reg == player_x[i][48]) & (ver_reg == player_y[i][48]));
 		end
 	
 	end//end of i for loop

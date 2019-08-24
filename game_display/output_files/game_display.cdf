@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("C:/Users/Lenovo/Documents/QuartusPrimeWorkspace/IEEEArduino/game_display/output_files/") File("game_display.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C20F484) Path("C:/Mewantha/University/IEEE Arduino Workshop/currentworking/HardwareRepo/game_display/output_files/") File("game_display.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
